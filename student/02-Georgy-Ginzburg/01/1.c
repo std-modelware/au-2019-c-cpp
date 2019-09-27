@@ -25,7 +25,7 @@ struct {
     float h;
     double i;
 } manyTypes = {'a',
-               100500,
+               -100500,
                100,
                1000050000,
                1050,

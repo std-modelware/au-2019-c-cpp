@@ -1,3 +1,4 @@
-/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles/1.dir
 /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles/1.dir
+/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles/2.dir

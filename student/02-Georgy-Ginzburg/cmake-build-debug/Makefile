@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Geo
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/clion/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/opt/clion/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -123,6 +123,19 @@ depend:
 	$(MAKE) -f CMakeFiles/1.dir/build.make CMakeFiles/1.dir/build
 .PHONY : 1/fast
 
+#=============================================================================
+# Target rules for targets named 2
+
+# Build rule for target.
+2 : cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 2
+.PHONY : 2
+
+# fast build rule for target.
+2/fast:
+	$(MAKE) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/build
+.PHONY : 2/fast
+
 01/1.o: 01/1.c.o
 
 .PHONY : 01/1.o
@@ -150,18 +163,49 @@ depend:
 	$(MAKE) -f CMakeFiles/1.dir/build.make CMakeFiles/1.dir/01/1.c.s
 .PHONY : 01/1.c.s
 
+02/2.o: 02/2.c.o
+
+.PHONY : 02/2.o
+
+# target to build an object file
+02/2.c.o:
+	$(MAKE) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/02/2.c.o
+.PHONY : 02/2.c.o
+
+02/2.i: 02/2.c.i
+
+.PHONY : 02/2.i
+
+# target to preprocess a source file
+02/2.c.i:
+	$(MAKE) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/02/2.c.i
+.PHONY : 02/2.c.i
+
+02/2.s: 02/2.c.s
+
+.PHONY : 02/2.s
+
+# target to generate assembly for a file
+02/2.c.s:
+	$(MAKE) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/02/2.c.s
+.PHONY : 02/2.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... 1"
 	@echo "... edit_cache"
+	@echo "... 1"
+	@echo "... rebuild_cache"
+	@echo "... 2"
 	@echo "... 01/1.o"
 	@echo "... 01/1.i"
 	@echo "... 01/1.s"
+	@echo "... 02/2.o"
+	@echo "... 02/2.i"
+	@echo "... 02/2.s"
 .PHONY : help
 
 
