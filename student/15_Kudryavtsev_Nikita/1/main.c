@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <time.h>
 
-
 void method_one(long int a, long int b) {
     printf("\n======= METHOD 1 =======");
     clock_t start = clock();
+    
     long int result = a % b;
+    
     clock_t end = clock();
     double seconds = (double)(end - start) / CLOCKS_PER_SEC;
     printf("\nResult: %ld\n", result);
     printf("Time: %f seconds\n", seconds);
 }
-
 
 void method_two(long int a, long int b) {
     printf("\n======= METHOD 2 =======");
@@ -47,7 +47,6 @@ void method_two(long int a, long int b) {
     printf("Time: %f seconds\n", seconds);
 }
 
-
 void test() {
     long int a;
     long int b;
@@ -56,23 +55,19 @@ void test() {
     b = 4;
     method_one(a, b);
     method_two(a, b);
-
     a = -15;
     b = 4;
     method_one(a, b);
     method_two(a, b);
-
     a = 113;
     b = -3;
     method_one(a, b);
     method_two(a, b);
-
     a = -15;
     b = -7;
     method_one(a, b);
     method_two(a, b);
 }
-
 
 int main() {
 
