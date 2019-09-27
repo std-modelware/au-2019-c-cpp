@@ -6,6 +6,9 @@ int main(){
 		if(a<0){
 		a=-a;
 	}
+		if(b<0){
+		b=-b;
+	}
 	while(a>=b){
      a-=b;
 	}
