@@ -1,0 +1,51 @@
+#include <stdio.h> 
+#include <limits.h> 
+
+void main() { 
+
+char c = 'a'; 
+signed char sc = 'a'; 
+unsigned char usc = 'a'; 
+
+int i = 123456; 
+signed int si = 123456; 
+unsigned int usi = 123456; 
+long int li = 123456; 
+short int shi = 123456; 
+signed long int sli = 123456; 
+unsigned long int usli = 123456; 
+signed short int sshi = 123456; 
+unsigned short int usshi = 123456; 
+
+float f = 3.1415926536; 
+
+double d = 3.1415926536; 
+long double ld = 3.1415926536; 
+
+printf("char = %c\n", c); 
+printf("signed char = %c\n", sc); 
+printf("unsigned char = %c\n", usc); 
+
+printf("------------------\n"); 
+
+printf("int = %d\n", i); 
+printf("signed int = %d\n", si); 
+printf("unsigned int = %u\n", usi); 
+printf("long int = %ld\n", li); 
+printf("short int = %hi\n", shi); 
+
+printf("signed long int = %ld\n", sli); 
+printf("unsigned long int = %lu\n", usli); 
+printf("signed short int = %hi\n", sshi); 
+printf("unsigned short int = %hu\n", usshi); 
+
+printf("------------------\n"); 
+
+printf("float = %f\n", f); 
+printf("double = %g\n", d); 
+printf("long double = %Lg\n", ld); 
+
+printf("==================\n"); 
+long double a = ld; 
+printf("%c\t%c\t%c\t%d\t%d\t%u\t%ld\t%hi\t%ld\t%lu\t%hi\t%hu\t%f\t%g\t%Lg",a,a,a,a,a,a,a,a,a,a,a,a,a,a,a);
+}

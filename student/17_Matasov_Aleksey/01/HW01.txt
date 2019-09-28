@@ -1,0 +1,14 @@
+#include <limits.h> 
+#include <stdio.h> 
+int f(int a, int b) { 
+if (a%b<0) return (a%b) +abs(b); 
+return a%b; 
+} 
+main () 
+{ 
+int a; 
+int b; 
+printf ("27 \% 4 = %d\n", 27 % 4); 
+printf ("-15 \% 4 = %d\n", f(-15, 4)); 
+printf ("113 \% -3 = %d\n", f(113, -3)); 
+printf ("-15 \% -7 = %d\n", f(-15, -7));
