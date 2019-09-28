@@ -8,7 +8,8 @@
 int main() {
     int a, b;
     scanf("%d %d", &a, &b);
-    printf("%d", abs(a) % abs(b));
+    printf("%d", (a % b) < 0 ? (a % b) + abs(b) : (a % b));
+
     return 0;
 }
 
