@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 void main() {
 	printf("preprocessor\n");
@@ -7,7 +8,7 @@ void main() {
 	int divideby = 4;
 
 
-#define MOD printf("%d mod %d = %u \n", n, divideby, n%divideby > 0 ? (n%divideby): -(n%divideby));  
+#define MOD printf("%d mod %d = %u \n", n, divideby, n%divideby > 0 ? (n%divideby): abs(divideby) - abs(n)% abs(divideby));  
 
 	MOD
 
