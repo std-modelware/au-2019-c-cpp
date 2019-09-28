@@ -1,0 +1,4 @@
+﻿  Source.c
+C:\Users\svyat\source\repos\NxN_matrix\NxN_matrix\Source.c(7,1): warning C4305:  инициализация: усечение из "int" в "short"
+C:\Users\svyat\source\repos\NxN_matrix\NxN_matrix\Source.c(10,1): warning C4305:  инициализация: усечение из "double" в "float"
+  NxN_matrix.vcxproj -> C:\Users\svyat\source\repos\NxN_matrix\Debug\NxN_matrix.exe

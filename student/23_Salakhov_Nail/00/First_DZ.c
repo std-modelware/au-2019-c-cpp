@@ -1,7 +1,7 @@
 #include <stdio.h>
 main(){
 	char z = 'X';
-	int a = 1111;
+	int a = -1111;
 	float b = 1.1;
 	double c = 11.1111111111;
 	printf("z = %c\na = %d\nb = %f\nc = %e \n", z, a, b, c);
