@@ -102,6 +102,7 @@ void main() {
     line2.l1=L3;
     line2.l2=L4;
     printf("%d", two_lines(line1, line2));
+    //тесты завтра сделаю...
 }
 
 
