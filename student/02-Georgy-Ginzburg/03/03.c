@@ -25,11 +25,17 @@ typedef struct {
 } Triangle;
 
 typedef struct {
-    Point p1, p2;
+    Point start, end;
+} Segment;
+
+typedef struct {
+    Segment edge1, edge2;
     /*
-        p1---p
-        |   |
-        p---p2
+        p1---------p
+        |         |
+        edge1     |
+        |         |
+        p--edge2-p2
                 */
 } Rectangle;
 
@@ -79,7 +85,9 @@ bool is_triangle_right(Triangle t) {
 }
 
 bool is_rect_sqr(Rectangle r) {
-    return fabs(r.p1.y - r.p2.y) == fabs(r.p1.x - r.p2.x);
+    double sqr_len_edge_1 = pow((r.edge1.start.x - r.edge1.end.x), 2) + pow((r.edge1.start.y - r.edge1.end.y), 2);
+    double sqr_len_edge_2 = pow((r.edge2.start.x - r.edge2.end.x), 2) + pow((r.edge2.start.y - r.edge2.end.y), 2);
+    return sqr_len_edge_1 == sqr_len_edge_2;
 }
 
 bool does_line_intersect_circle_center(Line l, Circle c) {
@@ -109,10 +117,10 @@ int main() {
     Triangle tr_notr = {{0, 0},
                         {3, 1},
                         {0, 5}};
-    Rectangle rect_sq = {{1, 2},
-                         {2, 1}};
-    Rectangle rect_nonsq = {{1, 3},
-                            {1, 5}};
+    Rectangle rect_sq = {{{0, 0}, {0, 3}},
+                         {{0, 3}, {3, 3}}};
+    Rectangle rect_nonsq = {{{0, 0}, {0, 3}},
+                            {{0, 3}, {3, 5}}};
     Circle c = {{0, 5}, 3};
 
     printf("Equal points: %d ", are_points_equal(p1, p3));
