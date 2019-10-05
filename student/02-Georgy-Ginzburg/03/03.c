@@ -25,11 +25,17 @@ typedef struct {
 } Triangle;
 
 typedef struct {
-    Point p1, p2;
+    Point start, end;
+} Segment;
+
+typedef struct {
+    Segment edge1, edge2;
     /*
-        p1---p
-        |   |
-        p---p2
+        p1---------p
+        |         |
+        edge1     |
+        |         |
+        p--edge2-p2
                 */
 } Rectangle;
 
@@ -79,7 +85,9 @@ bool is_triangle_right(Triangle t) {
 }
 
 bool is_rect_sqr(Rectangle r) {
-    return fabs(r.p1.y - r.p2.y) == fabs(r.p1.x - r.p2.x);
+    double sqr_len_edge_1 = pow((r.edge1.start.x - r.edge1.end.x), 2) + pow((r.edge1.start.y - r.edge1.end.y), 2);
+    double sqr_len_edge_2 = pow((r.edge2.start.x - r.edge2.end.x), 2) + pow((r.edge2.start.y - r.edge2.end.y), 2);
+    return sqr_len_edge_1 == sqr_len_edge_2;
 }
 
 bool does_line_intersect_circle_center(Line l, Circle c) {
@@ -89,32 +97,45 @@ bool does_line_intersect_circle_center(Line l, Circle c) {
 int main() {
     Point p1 = {1, 0.5};
     Point p2 = {1, 8};
+    Point p3 = {1, 8};
+
     Ray r1 = {{1, 8},
               {2, 4}};
     Ray r2 = {{1,   8},
               {0.3, -0.2}};
+    Ray r3 = {{23,    9},
+              {0.494, 39321}};
+
     Line l1 = {3, 5};
     Line l2 = {3, 6};
+    Line l3 = {4,
+               103};
+
     Triangle tr_r = {{0, 0},
                      {3, 0},
                      {0, 5}};
     Triangle tr_notr = {{0, 0},
                         {3, 1},
                         {0, 5}};
-    Rectangle rect_sq = {{1, 2},
-                         {2, 1}};
-    Rectangle rect_nonsq = {{1, 3},
-                            {2, 4}};
+    Rectangle rect_sq = {{{0, 0}, {0, 3}},
+                         {{0, 3}, {3, 3}}};
+    Rectangle rect_nonsq = {{{0, 0}, {0, 3}},
+                            {{0, 3}, {3, 5}}};
     Circle c = {{0, 5}, 3};
 
-    printf("%d\n", are_points_equal(p1, p2));
-    printf("%d\n", are_rays_starting_from_same_point(r1, r2));
-    printf("%d\n", is_point_on_line(p2, l1));
-    printf(("%d\n"), do_lines_intersect(l1, l2));
-    printf("%d ", is_triangle_right(tr_r));
+    printf("Equal points: %d ", are_points_equal(p1, p3));
+    printf("%d\n", are_points_equal(p3, p2));
+    printf("Rays from one starting point: %d ", are_rays_starting_from_same_point(r1, r2));
+    printf("%d\n", are_rays_starting_from_same_point(r3, r2));
+    printf("Is point on line: %d ", is_point_on_line(p2, l1));
+    printf("%d\n", is_point_on_line(p2, l2));
+    printf("Do lines intersect: %d ", do_lines_intersect(l1, l2));
+    printf("%d\n", do_lines_intersect(l1, l3));
+    printf("Is triangle right: %d ", is_triangle_right(tr_r));
     printf("%d\n", is_triangle_right(tr_notr));
-    printf("%d ", is_rect_sqr(rect_sq));
+    printf("Is rectangle a square: %d ", is_rect_sqr(rect_sq));
     printf("%d\n", is_rect_sqr(rect_nonsq));
-    printf("%d\n", does_line_intersect_circle_center(l1, c));
+    printf("Does a line intersect circle center: %d ", does_line_intersect_circle_center(l1, c));
+    printf("%d\n", does_line_intersect_circle_center(l2, c));
     return 0;
 }
