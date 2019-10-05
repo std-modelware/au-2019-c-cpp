@@ -95,9 +95,13 @@ int main() {
               {2, 4}};
     Ray r2 = {{1,   8},
               {0.3, -0.2}};
+    Ray r3 = {{23,    9},
+              {0.494, 39321}};
 
     Line l1 = {3, 5};
     Line l2 = {3, 6};
+    Line l3 = {4,
+               103};
 
     Triangle tr_r = {{0, 0},
                      {3, 0},
@@ -113,9 +117,12 @@ int main() {
 
     printf("Equal points: %d ", are_points_equal(p1, p3));
     printf("%d\n", are_points_equal(p3, p2));
-    printf("Rays from one starting point: %d\n", are_rays_starting_from_same_point(r1, r2));
-    printf("Is point on line: %d\n", is_point_on_line(p2, l1));
-    printf("Do lines intersect: %d\n", do_lines_intersect(l1, l2));
+    printf("Rays from one starting point: %d ", are_rays_starting_from_same_point(r1, r2));
+    printf("%d\n", are_rays_starting_from_same_point(r3, r2));
+    printf("Is point on line: %d ", is_point_on_line(p2, l1));
+    printf("%d\n", is_point_on_line(p2, l2));
+    printf("Do lines intersect: %d ", do_lines_intersect(l1, l2));
+    printf("%d\n", do_lines_intersect(l1, l3));
     printf("Is triangle right: %d ", is_triangle_right(tr_r));
     printf("%d\n", is_triangle_right(tr_notr));
     printf("Is rectangle a square: %d ", is_rect_sqr(rect_sq));
