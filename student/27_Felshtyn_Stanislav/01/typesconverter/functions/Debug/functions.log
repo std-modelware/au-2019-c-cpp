@@ -1,0 +1,4 @@
+﻿  functions.c
+C:\Users\User\source\repos\functions\functions\functions.c(16,21): warning C4101: 'c': unreferenced local variable
+C:\Users\User\source\repos\functions\functions\functions.c(51,53): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  functions.vcxproj -> C:\Users\User\source\repos\functions\Debug\functions.exe
