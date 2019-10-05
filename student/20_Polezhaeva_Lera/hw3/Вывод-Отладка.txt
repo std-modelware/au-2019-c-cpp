@@ -1,0 +1,18 @@
+﻿"hw3.exe" (Win32). Загружено "C:\Users\asus\Desktop\Новая папка (3)\hw3\Debug\hw3.exe". Символы загружены.
+"hw3.exe" (Win32). Загружено "C:\Windows\SysWOW64\ntdll.dll". 
+"hw3.exe" (Win32). Загружено "C:\Windows\SysWOW64\kernel32.dll". 
+"hw3.exe" (Win32). Загружено "C:\Windows\SysWOW64\KernelBase.dll". 
+"hw3.exe" (Win32). Загружено "C:\Windows\SysWOW64\vcruntime140d.dll". 
+"hw3.exe" (Win32). Загружено "C:\Windows\SysWOW64\ucrtbased.dll". 
+Поток 0x38f0 завершился с кодом 0 (0x0).
+"hw3.exe" (Win32). Загружено "C:\Windows\SysWOW64\kernel.appcore.dll". 
+"hw3.exe" (Win32). Загружено "C:\Windows\SysWOW64\msvcrt.dll". 
+"hw3.exe" (Win32). Загружено "C:\Windows\SysWOW64\rpcrt4.dll". 
+"hw3.exe" (Win32). Загружено "C:\Windows\SysWOW64\sspicli.dll". 
+"hw3.exe" (Win32). Загружено "C:\Windows\SysWOW64\cryptbase.dll". 
+"hw3.exe" (Win32). Загружено "C:\Windows\SysWOW64\bcryptprimitives.dll". 
+"hw3.exe" (Win32). Загружено "C:\Windows\SysWOW64\sechost.dll". 
+Поток 0x38fc завершился с кодом 0 (0x0).
+Поток 0x356c завершился с кодом 0 (0x0).
+Поток 0x365c завершился с кодом 0 (0x0).
+Программа "[15352] hw3.exe" завершилась с кодом 0 (0x0).
