@@ -1,11 +1,10 @@
-#include <math.h>
 #include <stdio.h>
 
 struct point {long int x, y;};
 struct ray {long int xs, ys, xe, ye;};
 struct line {long int xs, ys, xe, ye;};
-struct triangle {double x1, y1, x2, y2, x3, y3;};
-struct rectangle {double x1, y1, x2, y2, x3, y3, x4, y4;};
+struct triangle {long int x1, y1, x2, y2, x3, y3;};
+struct rectangle {long int x1, y1, x2, y2, x3, y3, x4, y4;};
 struct circle {long int x, y, r;};
 
 int equal_points(struct point p1, struct point p2) {
@@ -31,13 +30,12 @@ int lines_intersection(struct line l1, struct line l2) {
 }
 
 int right_triangle(struct triangle t) {
-    double side1, side2, side3;
-    double third_side1, third_side2;
-    double hypotenuse = -1;
-    double eps = 1E-10;
-    side1 = sqrt((t.x2 - t.x1) * (t.x2 - t.x1) + (t.y2 - t.y1) * (t.y2 - t.y1));
-    side2 = sqrt((t.x3 - t.x2) * (t.x3 - t.x2) + (t.y3 - t.y2) * (t.y3 - t.y2));
-    side3 = sqrt((t.x1 - t.x3) * (t.x1 - t.x3) + (t.y1 - t.y3) * (t.y1 - t.y3));
+    long int side1, side2, side3;
+    long int third_side1, third_side2;
+    long int hypotenuse = -1;
+    side1 = (t.x2 - t.x1) * (t.x2 - t.x1) + (t.y2 - t.y1) * (t.y2 - t.y1);
+    side2 = (t.x3 - t.x2) * (t.x3 - t.x2) + (t.y3 - t.y2) * (t.y3 - t.y2);
+    side3 = (t.x1 - t.x3) * (t.x1 - t.x3) + (t.y1 - t.y3) * (t.y1 - t.y3);
     if (side1 > hypotenuse) {
         hypotenuse = side1;
         third_side1 = side2;
@@ -53,21 +51,19 @@ int right_triangle(struct triangle t) {
         third_side1 = side1;
         third_side2 = side2;
     }
-    if (fabs(hypotenuse*hypotenuse - (third_side1*third_side1 + third_side2*third_side2))<eps)
+    if (hypotenuse == (third_side1 + third_side2))
         return 1;
     else
         return 0;
 }
 
 int square(struct rectangle r) {
-    double side1, side2, side3, side4;
-    double eps = 1E-10;
-    side1 = sqrt((r.x4 - r.x2) * (r.x4 - r.x2) + (r.y4 - r.y2) * (r.y4 - r.y2));
-    side2 = sqrt((r.x4 - r.x3) * (r.x4 - r.x3) + (r.y4 - r.y3) * (r.y4 - r.y3));
-    side3 = sqrt((r.x2 - r.x1) * (r.x2 - r.x1) + (r.y2 - r.y1) * (r.y2 - r.y1));
-    side4 = sqrt((r.x3 - r.x1) * (r.x3 - r.x1) + (r.y3 - r.y1) * (r.y3 - r.y1));
-    int is_equal = fabs(side1-side2)<eps;
-    if (fabs(side1-side2)<eps && fabs(side2-side3)<eps && fabs(side3-side4)<eps)
+    long int side1, side2, side3, side4;
+    side1 = (r.x4 - r.x2) * (r.x4 - r.x2) + (r.y4 - r.y2) * (r.y4 - r.y2);
+    side2 = (r.x4 - r.x3) * (r.x4 - r.x3) + (r.y4 - r.y3) * (r.y4 - r.y3);
+    side3 = (r.x2 - r.x1) * (r.x2 - r.x1) + (r.y2 - r.y1) * (r.y2 - r.y1);
+    side4 = (r.x3 - r.x1) * (r.x3 - r.x1) + (r.y3 - r.y1) * (r.y3 - r.y1);
+    if (side1 == side2 && side2 == side3 && side3 ==side4)
         return 1;
     else
         return 0;
