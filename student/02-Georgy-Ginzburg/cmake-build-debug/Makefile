@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Geo
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/opt/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/opt/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named 03
+# Target rules for targets named 2
 
 # Build rule for target.
-03: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 03
-.PHONY : 03
+2 : cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 2
+.PHONY : 2
 
 # fast build rule for target.
-03/fast:
-	$(MAKE) -f CMakeFiles/03.dir/build.make CMakeFiles/03.dir/build
-.PHONY : 03/fast
+2/fast:
+	$(MAKE) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/build
+.PHONY : 2/fast
 
 #=============================================================================
 # Target rules for targets named 1
@@ -137,17 +137,56 @@ depend:
 .PHONY : 1/fast
 
 #=============================================================================
-# Target rules for targets named 2
+# Target rules for targets named 03
 
 # Build rule for target.
-2 : cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 2
-.PHONY : 2
+03: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 03
+.PHONY : 03
 
 # fast build rule for target.
-2/fast:
-	$(MAKE) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/build
-.PHONY : 2/fast
+03/fast:
+	$(MAKE) -f CMakeFiles/03.dir/build.make CMakeFiles/03.dir/build
+.PHONY : 03/fast
+
+#=============================================================================
+# Target rules for targets named 04
+
+# Build rule for target.
+04: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 04
+.PHONY : 04
+
+# fast build rule for target.
+04/fast:
+	$(MAKE) -f CMakeFiles/04.dir/build.make CMakeFiles/04.dir/build
+.PHONY : 04/fast
+
+#=============================================================================
+# Target rules for targets named double_linked
+
+# Build rule for target.
+double_linked: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 double_linked
+.PHONY : double_linked
+
+# fast build rule for target.
+double_linked/fast:
+	$(MAKE) -f CMakeFiles/double_linked.dir/build.make CMakeFiles/double_linked.dir/build
+.PHONY : double_linked/fast
+
+#=============================================================================
+# Target rules for targets named single_linked
+
+# Build rule for target.
+single_linked: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 single_linked
+.PHONY : single_linked
+
+# fast build rule for target.
+single_linked/fast:
+	$(MAKE) -f CMakeFiles/single_linked.dir/build.make CMakeFiles/single_linked.dir/build
+.PHONY : single_linked/fast
 
 01/1.o: 01/1.c.o
 
@@ -230,17 +269,77 @@ depend:
 	$(MAKE) -f CMakeFiles/03.dir/build.make CMakeFiles/03.dir/03/03.c.s
 .PHONY : 03/03.c.s
 
+04/double_linked.o: 04/double_linked.c.o
+
+.PHONY : 04/double_linked.o
+
+# target to build an object file
+04/double_linked.c.o:
+	$(MAKE) -f CMakeFiles/double_linked.dir/build.make CMakeFiles/double_linked.dir/04/double_linked.c.o
+.PHONY : 04/double_linked.c.o
+
+04/double_linked.i: 04/double_linked.c.i
+
+.PHONY : 04/double_linked.i
+
+# target to preprocess a source file
+04/double_linked.c.i:
+	$(MAKE) -f CMakeFiles/double_linked.dir/build.make CMakeFiles/double_linked.dir/04/double_linked.c.i
+.PHONY : 04/double_linked.c.i
+
+04/double_linked.s: 04/double_linked.c.s
+
+.PHONY : 04/double_linked.s
+
+# target to generate assembly for a file
+04/double_linked.c.s:
+	$(MAKE) -f CMakeFiles/double_linked.dir/build.make CMakeFiles/double_linked.dir/04/double_linked.c.s
+.PHONY : 04/double_linked.c.s
+
+04/single_linked.o: 04/single_linked.c.o
+
+.PHONY : 04/single_linked.o
+
+# target to build an object file
+04/single_linked.c.o:
+	$(MAKE) -f CMakeFiles/04.dir/build.make CMakeFiles/04.dir/04/single_linked.c.o
+	$(MAKE) -f CMakeFiles/single_linked.dir/build.make CMakeFiles/single_linked.dir/04/single_linked.c.o
+.PHONY : 04/single_linked.c.o
+
+04/single_linked.i: 04/single_linked.c.i
+
+.PHONY : 04/single_linked.i
+
+# target to preprocess a source file
+04/single_linked.c.i:
+	$(MAKE) -f CMakeFiles/04.dir/build.make CMakeFiles/04.dir/04/single_linked.c.i
+	$(MAKE) -f CMakeFiles/single_linked.dir/build.make CMakeFiles/single_linked.dir/04/single_linked.c.i
+.PHONY : 04/single_linked.c.i
+
+04/single_linked.s: 04/single_linked.c.s
+
+.PHONY : 04/single_linked.s
+
+# target to generate assembly for a file
+04/single_linked.c.s:
+	$(MAKE) -f CMakeFiles/04.dir/build.make CMakeFiles/04.dir/04/single_linked.c.s
+	$(MAKE) -f CMakeFiles/single_linked.dir/build.make CMakeFiles/single_linked.dir/04/single_linked.c.s
+.PHONY : 04/single_linked.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... 03"
-	@echo "... edit_cache"
-	@echo "... 1"
 	@echo "... rebuild_cache"
 	@echo "... 2"
+	@echo "... 1"
+	@echo "... edit_cache"
+	@echo "... 03"
+	@echo "... 04"
+	@echo "... double_linked"
+	@echo "... single_linked"
 	@echo "... 01/1.o"
 	@echo "... 01/1.i"
 	@echo "... 01/1.s"
@@ -250,6 +349,12 @@ help:
 	@echo "... 03/03.o"
 	@echo "... 03/03.i"
 	@echo "... 03/03.s"
+	@echo "... 04/double_linked.o"
+	@echo "... 04/double_linked.i"
+	@echo "... 04/double_linked.s"
+	@echo "... 04/single_linked.o"
+	@echo "... 04/single_linked.i"
+	@echo "... 04/single_linked.s"
 .PHONY : help
 
 
