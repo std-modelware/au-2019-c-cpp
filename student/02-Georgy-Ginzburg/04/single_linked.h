@@ -24,11 +24,9 @@ void NewNode(node *head, int val) {
     }
 }
 
-node CreateList(int *arr, int len) {
-    node head = NULL;
+void CreateList(node *head, int *arr, int len) {
     for (size_t i = 0; i < len; i++) {
-        NewNode(&head, arr[i]);
+        NewNode(head, arr[i]);
     }
-    return head;
 }
 

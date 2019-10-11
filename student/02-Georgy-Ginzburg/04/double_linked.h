@@ -26,9 +26,9 @@ void NewNode(node *head, node *tail, int val) {
             temp = temp->next;
         }
         new->prev = temp;
-        *tail = new;
-        temp->next = *tail;
+        temp->next = new;
     }
+    *tail = new;
 }
 
 void CreateList(node *head, node *tail, int *arr, int len) {

@@ -85,8 +85,10 @@ bool is_triangle_right(Triangle t) {
 }
 
 bool is_rect_sqr(Rectangle r) {
-    double sqr_len_edge_1 = pow((r.edge1.start.x - r.edge1.end.x), 2) + pow((r.edge1.start.y - r.edge1.end.y), 2);
-    double sqr_len_edge_2 = pow((r.edge2.start.x - r.edge2.end.x), 2) + pow((r.edge2.start.y - r.edge2.end.y), 2);
+    double sqr_len_edge_1 = pow((r.edge1.start.x - r.edge1.end.x), 2) +
+                            pow((r.edge1.start.y - r.edge1.end.y), 2);
+    double sqr_len_edge_2 = pow((r.edge2.start.x - r.edge2.end.x), 2) +
+                            pow((r.edge2.start.y - r.edge2.end.y), 2);
     return sqr_len_edge_1 == sqr_len_edge_2;
 }
 

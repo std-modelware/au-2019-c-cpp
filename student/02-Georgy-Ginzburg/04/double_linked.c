@@ -3,9 +3,10 @@
 #include "double_linked.h"
 
 int main() {
-    int arr[] = {3, 494, 292, 193, 491};
+    int arr[] = {3, 494, 92, 193, 491, 292};
     node head, tail = NULL;
-    CreateList(&head, &tail, arr, 5);
+    int l = (int) sizeof(arr) / sizeof(arr[0]);
+    CreateList(&head, &tail, arr, l);
 
     for (node temp = head; temp != NULL; temp = temp->next) {
         printf("%d ", temp->data);
