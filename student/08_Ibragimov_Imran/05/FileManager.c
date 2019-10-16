@@ -217,26 +217,26 @@ void main() {
 	}
 }
 
-	void PrintHelp() { //main menu text
-		printf("Current session files id's: ");
-		for (int i = 0; i < 5; i++)
-			if (files[i] != NULL) printf(" %d" , i);
-		printf("\n");
-		printf("\"-create\" to create new \n");
-		printf("\"-select\" to select created file \n");
-		printf("\"-exit\" to exit program \n \n");
-	}
+void PrintHelp() { //main menu text
+	printf("Current session files id's: ");
+	for (int i = 0; i < 5; i++)
+		if (files[i] != NULL) printf(" %d" , i);
+	printf("\n");
+	printf("\"-create\" to create new \n");
+	printf("\"-select\" to select created file \n");
+	printf("\"-exit\" to exit program \n \n");
+}
 	
-	void PrintSelectionMenu(int ind) { //selection menu text
-		printf("You are selecting MyFile%d. \n", ind);
-		printf("\"-print\" to start printing in current file \n");
-		printf("\"-copyc\" and \"-pastec\" to copy and paste by char \n");
-		printf("\"-copys\" and \"-pastes\" to copy and paste by string \n");
-		printf("\"-copyw\" and \"-pastew\" to copy and paste whole text in file \n");
-		printf("\"-exit\" to exit select mode \n");
-	}
+void PrintSelectionMenu(int ind) { //selection menu text
+	printf("You are selecting MyFile%d. \n", ind);
+	printf("\"-print\" to start printing in current file \n");
+	printf("\"-copyc\" and \"-pastec\" to copy and paste by char \n");
+	printf("\"-copys\" and \"-pastes\" to copy and paste by string \n");
+	printf("\"-copyw\" and \"-pastew\" to copy and paste whole text in file \n");
+	printf("\"-exit\" to exit select mode \n");
+}
 
-	void GetNewStr() { //getting new string and clearing input buffer
-		fseek(stdin, 0, SEEK_END);
-		if (fgets(str, sizeof(str), stdin) == NULL) exit(2);
-	}
+void GetNewStr() { //getting new string and clearing input buffer
+	fseek(stdin, 0, SEEK_END);
+	if (fgets(str, sizeof(str), stdin) == NULL) exit(2);
+}
