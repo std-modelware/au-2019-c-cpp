@@ -32,7 +32,7 @@ void main() {
     printf("N = ?\n");
     scanf("%d", &N);
     //вывод списка
-    for(int i = 1; i <= N; i++){
+    for(int i = 1; i <= N; i++) {
         scanf("%d", &x);
         atstart(x);
     }
@@ -45,7 +45,7 @@ void main() {
     printf("\n");
     //вывод списка в обратном порядке
     elem *reverser = head;
-    if (reverser == NULL){
+    if (reverser == NULL) {
         return;
     }
     while ((*reverser).next != NULL) {
