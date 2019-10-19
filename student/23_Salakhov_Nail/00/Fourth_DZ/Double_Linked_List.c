@@ -32,7 +32,7 @@ void main() {
     printf("N = ?\n");
     scanf("%d", &N);
     //вывод списка
-    for(int i = 1; i <= N; i++) {
+    for (int i = 1; i <= N; i++) {
         scanf("%d", &x);
         atstart(x);
     }
