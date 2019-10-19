@@ -1,0 +1,9 @@
+﻿  adress_links.c
+C:\Users\User\source\repos\adress_struct\adress_struct\Header.h(50,21): warning C4133: '=': incompatible types - from 'node' to 'node_2'
+C:\Users\User\source\repos\adress_struct\adress_struct\Header.h(52,24): warning C4133: '=': incompatible types - from 'node_2' to 'node'
+C:\Users\User\source\repos\adress_struct\adress_struct\Header.h(53,24): warning C4133: '=': incompatible types - from 'node_2' to 'node'
+C:\Users\User\source\repos\adress_struct\adress_struct\Header.h(61,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\User\source\repos\adress_struct\adress_struct\Header.h(67,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\User\source\repos\adress_struct\adress_struct\adress_links.c(20,54): warning C4133: '=': incompatible types - from 'node' to 'node_2'
+C:\Users\User\source\repos\adress_struct\adress_struct\adress_links.c(26,42): warning C4133: '=': incompatible types - from 'node' to 'node_2'
+  adress_struct.vcxproj -> C:\Users\User\source\repos\adress_struct\Debug\adress_struct.exe
