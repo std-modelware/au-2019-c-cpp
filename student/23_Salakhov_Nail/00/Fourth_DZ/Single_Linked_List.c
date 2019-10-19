@@ -10,16 +10,16 @@ void main(){
     elem *head;
     head = NULL;
     printf("N = ?\n");
-    scanf("%d",&N);
+    scanf("%d", &N);
     for (int i = 1; i <= N; i++) {
-        scanf("%d",&x);
-        elem* tmp = (elem*)malloc(sizeof(elem));
+        scanf("%d", &x);
+        elem *tmp = (elem*)malloc(sizeof(elem));
         (*tmp).num = x;
         (*tmp).next = head;
         head = tmp;
     }
     elem *runner = head;
-    while(runner != NULL) {
+    while (runner != NULL) {
         printf("%d ", (*runner).num);
         runner = (*runner).next;
     }
