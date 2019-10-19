@@ -1,0 +1,7 @@
+﻿  main.c
+C:\Users\User\source\repos\creation_files\creation_files\main.c(38,17): warning C4133: 'function': incompatible types - from 'char [22]' to 'FILE *'
+C:\Users\User\source\repos\creation_files\creation_files\main.c(38,29): warning C4020: 'fgetc': too many actual parameters
+C:\Users\User\source\repos\creation_files\creation_files\main.c(38,43): warning C4047: '!=': 'int' differs in levels of indirection from 'void *'
+C:\Users\User\source\repos\creation_files\creation_files\main.c(39,11): warning C4047: 'function': 'int' differs in levels of indirection from 'char [22]'
+C:\Users\User\source\repos\creation_files\creation_files\main.c(39,11): warning C4024: 'fputc': different types for formal and actual parameter 1
+  creation_files.vcxproj -> C:\Users\User\source\repos\creation_files\Debug\creation_files.exe
