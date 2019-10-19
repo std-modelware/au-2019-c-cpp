@@ -27,6 +27,120 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="stack">
+				<Option output="/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/stack" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 stack"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="stack/fast">
+				<Option output="/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/stack" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 stack/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="copyfile">
+				<Option output="/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/copyfile" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 copyfile"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="copyfile/fast">
+				<Option output="/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/copyfile" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 copyfile/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="double_linked_with_init">
+				<Option output="/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/double_linked_with_init" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 double_linked_with_init"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="double_linked_with_init/fast">
+				<Option output="/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/double_linked_with_init" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 double_linked_with_init/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="2">
 				<Option output="/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/2" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug"/>
@@ -288,6 +402,21 @@
 		<Unit filename="/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/04/single_linked.h">
 			<Option target="04"/>
 			<Option target="single_linked"/>
+		</Unit>
+		<Unit filename="/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/05/copyfile.c">
+			<Option target="copyfile"/>
+		</Unit>
+		<Unit filename="/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/05/double_linked_with_arbitrary_args.c">
+			<Option target="double_linked_with_init"/>
+		</Unit>
+		<Unit filename="/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/05/double_linked_with_arbitrary_args.h">
+			<Option target="double_linked_with_init"/>
+		</Unit>
+		<Unit filename="/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/05/stack.c">
+			<Option target="stack"/>
+		</Unit>
+		<Unit filename="/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/05/stack.h">
+			<Option target="stack"/>
 		</Unit>
 		<Unit filename="/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

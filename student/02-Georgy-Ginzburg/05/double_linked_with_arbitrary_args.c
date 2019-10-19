@@ -1,13 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "double_linked.h"
+#include "double_linked_with_arbitrary_args.h"
 
 int main() {
     int arr[] = {1, 3, 34, 292, 90};
     node head = NULL;
     node tail = NULL;
-    int l = (int) sizeof(arr) / sizeof(arr[0]);
-    CreateList(&head, &tail, arr, l);
+    CreateList(&head, &tail, 5, 0, 9, 8, 5, 24);
 
     for (node temp = head; temp != NULL; temp = temp->next) {
         printf("%d ", temp->data);

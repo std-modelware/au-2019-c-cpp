@@ -111,6 +111,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named stack
+
+# Build rule for target.
+stack: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 stack
+.PHONY : stack
+
+# fast build rule for target.
+stack/fast:
+	$(MAKE) -f CMakeFiles/stack.dir/build.make CMakeFiles/stack.dir/build
+.PHONY : stack/fast
+
+#=============================================================================
+# Target rules for targets named copyfile
+
+# Build rule for target.
+copyfile: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 copyfile
+.PHONY : copyfile
+
+# fast build rule for target.
+copyfile/fast:
+	$(MAKE) -f CMakeFiles/copyfile.dir/build.make CMakeFiles/copyfile.dir/build
+.PHONY : copyfile/fast
+
+#=============================================================================
+# Target rules for targets named double_linked_with_init
+
+# Build rule for target.
+double_linked_with_init: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 double_linked_with_init
+.PHONY : double_linked_with_init
+
+# fast build rule for target.
+double_linked_with_init/fast:
+	$(MAKE) -f CMakeFiles/double_linked_with_init.dir/build.make CMakeFiles/double_linked_with_init.dir/build
+.PHONY : double_linked_with_init/fast
+
+#=============================================================================
 # Target rules for targets named 2
 
 # Build rule for target.
@@ -326,6 +365,87 @@ single_linked/fast:
 	$(MAKE) -f CMakeFiles/single_linked.dir/build.make CMakeFiles/single_linked.dir/04/single_linked.c.s
 .PHONY : 04/single_linked.c.s
 
+05/copyfile.o: 05/copyfile.c.o
+
+.PHONY : 05/copyfile.o
+
+# target to build an object file
+05/copyfile.c.o:
+	$(MAKE) -f CMakeFiles/copyfile.dir/build.make CMakeFiles/copyfile.dir/05/copyfile.c.o
+.PHONY : 05/copyfile.c.o
+
+05/copyfile.i: 05/copyfile.c.i
+
+.PHONY : 05/copyfile.i
+
+# target to preprocess a source file
+05/copyfile.c.i:
+	$(MAKE) -f CMakeFiles/copyfile.dir/build.make CMakeFiles/copyfile.dir/05/copyfile.c.i
+.PHONY : 05/copyfile.c.i
+
+05/copyfile.s: 05/copyfile.c.s
+
+.PHONY : 05/copyfile.s
+
+# target to generate assembly for a file
+05/copyfile.c.s:
+	$(MAKE) -f CMakeFiles/copyfile.dir/build.make CMakeFiles/copyfile.dir/05/copyfile.c.s
+.PHONY : 05/copyfile.c.s
+
+05/double_linked_with_arbitrary_args.o: 05/double_linked_with_arbitrary_args.c.o
+
+.PHONY : 05/double_linked_with_arbitrary_args.o
+
+# target to build an object file
+05/double_linked_with_arbitrary_args.c.o:
+	$(MAKE) -f CMakeFiles/double_linked_with_init.dir/build.make CMakeFiles/double_linked_with_init.dir/05/double_linked_with_arbitrary_args.c.o
+.PHONY : 05/double_linked_with_arbitrary_args.c.o
+
+05/double_linked_with_arbitrary_args.i: 05/double_linked_with_arbitrary_args.c.i
+
+.PHONY : 05/double_linked_with_arbitrary_args.i
+
+# target to preprocess a source file
+05/double_linked_with_arbitrary_args.c.i:
+	$(MAKE) -f CMakeFiles/double_linked_with_init.dir/build.make CMakeFiles/double_linked_with_init.dir/05/double_linked_with_arbitrary_args.c.i
+.PHONY : 05/double_linked_with_arbitrary_args.c.i
+
+05/double_linked_with_arbitrary_args.s: 05/double_linked_with_arbitrary_args.c.s
+
+.PHONY : 05/double_linked_with_arbitrary_args.s
+
+# target to generate assembly for a file
+05/double_linked_with_arbitrary_args.c.s:
+	$(MAKE) -f CMakeFiles/double_linked_with_init.dir/build.make CMakeFiles/double_linked_with_init.dir/05/double_linked_with_arbitrary_args.c.s
+.PHONY : 05/double_linked_with_arbitrary_args.c.s
+
+05/stack.o: 05/stack.c.o
+
+.PHONY : 05/stack.o
+
+# target to build an object file
+05/stack.c.o:
+	$(MAKE) -f CMakeFiles/stack.dir/build.make CMakeFiles/stack.dir/05/stack.c.o
+.PHONY : 05/stack.c.o
+
+05/stack.i: 05/stack.c.i
+
+.PHONY : 05/stack.i
+
+# target to preprocess a source file
+05/stack.c.i:
+	$(MAKE) -f CMakeFiles/stack.dir/build.make CMakeFiles/stack.dir/05/stack.c.i
+.PHONY : 05/stack.c.i
+
+05/stack.s: 05/stack.c.s
+
+.PHONY : 05/stack.s
+
+# target to generate assembly for a file
+05/stack.c.s:
+	$(MAKE) -f CMakeFiles/stack.dir/build.make CMakeFiles/stack.dir/05/stack.c.s
+.PHONY : 05/stack.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -333,6 +453,9 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... stack"
+	@echo "... copyfile"
+	@echo "... double_linked_with_init"
 	@echo "... 2"
 	@echo "... 1"
 	@echo "... edit_cache"
@@ -355,6 +478,15 @@ help:
 	@echo "... 04/single_linked.o"
 	@echo "... 04/single_linked.i"
 	@echo "... 04/single_linked.s"
+	@echo "... 05/copyfile.o"
+	@echo "... 05/copyfile.i"
+	@echo "... 05/copyfile.s"
+	@echo "... 05/double_linked_with_arbitrary_args.o"
+	@echo "... 05/double_linked_with_arbitrary_args.i"
+	@echo "... 05/double_linked_with_arbitrary_args.s"
+	@echo "... 05/stack.o"
+	@echo "... 05/stack.i"
+	@echo "... 05/stack.s"
 .PHONY : help
 
 

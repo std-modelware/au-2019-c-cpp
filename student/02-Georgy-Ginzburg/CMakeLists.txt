@@ -10,3 +10,6 @@ add_executable(04 04/single_linked.c)
 add_executable(single_linked 04/single_linked.c)
 
 add_executable(double_linked 04/double_linked.c)
+add_executable(double_linked_with_init 05/double_linked_with_arbitrary_args.c)
+add_executable(copyfile 05/copyfile.c)
+add_executable(stack 05/stack.c)
