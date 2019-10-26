@@ -5,13 +5,14 @@
 static size_t stackSize;
 static char *stackBottom;
 static char *stackPointer;
-static int lastErrorCode = 0;
+static char *lastErrorCode = "";
 
 void au_init(size_t sz) {
     stackSize = sz;
     stackBottom = calloc(sizeof(char), sz);
     if (stackBottom == NULL) {
-        lastErrorCode = 1;
+        lastErrorCode = "Could not allocate memory\n";
+        return;
     }
     stackPointer = stackBottom;
 }
@@ -25,7 +26,7 @@ void au_release() {
 
 void au_push(char i) {
     if (stackPointer - stackBottom >= stackSize) {
-        lastErrorCode == 2;
+        lastErrorCode = "Stack overflow\n";
         return;
     }
     *stackPointer = i;
@@ -34,14 +35,14 @@ void au_push(char i) {
 
 char au_pop() {
     if (stackBottom == stackPointer) {
-        lastErrorCode == 3;
+        lastErrorCode = "Stack is empty\n";
         return 0;
     }
     stackPointer--;
     return *stackPointer;
 }
 
-int au_get_last_error() {
+char *au_get_last_error() {
     return lastErrorCode;
 }
 
