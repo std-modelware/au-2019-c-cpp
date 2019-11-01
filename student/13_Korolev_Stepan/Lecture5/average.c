@@ -1,4 +1,5 @@
 #include "average.h"
+#include <math.h>
 #include <stdarg.h>
 
 double average(int count, ...) {
@@ -9,13 +10,13 @@ double average(int count, ...) {
 
 	for (int j = 0; j < count; j++) {
 
-		sum += va_arg(ap, int); /* Увеличивает ap до следующего аргумента. */
+		sum += pow(va_arg(ap, int), 2); /* Увеличивает ap до следующего аргумента. */
 
 	}
 
 	va_end(ap);
 
 
-	return sum / count;
+	return sqrt(sum);
 
 }
