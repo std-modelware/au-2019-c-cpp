@@ -19,7 +19,7 @@ void c_copyfile(char name[], char copyname[]) {
         char c;
         while(1) {
             c = fgetc(fp);
-            if (c == EOF) {
+            if (feof(fp)) {
                 break;
             }
             fputc(c, fpcopy);
@@ -36,10 +36,9 @@ void s_copyfile(char name[], char copyname[]) {
     } else {
         FILE* fpcopy = fopen(copyname, "w");
         char c[50];
-        char* estr;
         while(1) {
-            estr = fgets(c, sizeof(c), fp);
-            if (estr == NULL) {
+            fgets(c, 50, fp);
+            if (feof(fp)) {
                 break;
             }
             fputs(c, fpcopy);
@@ -56,16 +55,12 @@ void f_copyfile(char name[], char copyname[]) {
         printf("Unable to open file: %s", name);
     } else {
         FILE* fpcopy = fopen(copyname, "w");
-        fseek(fp , 0 , SEEK_END);
-        long lSize = ftell(fp);
-        rewind(fp);
-        
-        char* buffer = (char*)calloc(lSize, sizeof(char));
-        fread(buffer, 1, lSize, fp);
-        
-        //содержимое файла теперь находится в буфере
-        fputs(buffer, fpcopy);
-        free (buffer);
+        char buffer[50];
+        int count = 0;
+        while(!(feof(fp))) {
+            count = fread(buffer, 1, 50, fp);
+            fwrite(buffer, 1, count, fpcopy);
+        }
         fclose(fpcopy);
         // завершение работы
     }
