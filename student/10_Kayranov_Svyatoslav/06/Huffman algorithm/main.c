@@ -7,11 +7,9 @@ int maxCount = 0;
 int count;
 int i;
 char c;
-char a[255];
+char a[255] = { 0 };;
 
 int main(void){
-    //обнуление массива
-    for (i = 0; i < 255; i++) a[i] = 0;
     
     //считывание и подсчет букв
     while ((c = getchar()) != '\n') {
