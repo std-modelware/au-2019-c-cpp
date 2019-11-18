@@ -22,6 +22,7 @@ void readString(){
     printf("Считано: (%s) (%s) (%d) (%s)\n", utilityName, option, digits, fileName);
 }
 
+//переписать через switch
 void checkArgs() {
     if (strncmp(utilityName, "head", 4)) {
         printf("%s%s%s\n", "No command ", utilityName, " found");
@@ -41,6 +42,7 @@ void checkArgs() {
     }
 }
 
+//поработать над считыванием бинарных файлов 
 void nOption() {
     if (!(strncmp(option, "-n", 2))) {
         char s[200];
