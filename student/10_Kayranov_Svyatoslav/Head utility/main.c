@@ -12,6 +12,7 @@ char option[LEN];
 char str[LEN];
 bool flag = 0;
 
+//добавить проверку на опускание option 
 void readString(){
     scanf("%s%s%d%s", utilityName, option, &digits, fileName);
 
