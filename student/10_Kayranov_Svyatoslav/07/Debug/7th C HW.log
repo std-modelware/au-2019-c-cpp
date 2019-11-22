@@ -1,0 +1,3 @@
+﻿  binary_tree.c
+C:\Users\svyat\source\repos\7th C HW\binary_tree.c(59): warning C4715:  add: значение возвращается не при всех путях выполнения
+  7th C HW.vcxproj -> C:\Users\svyat\source\repos\7th C HW\Debug\7th C HW.exe
