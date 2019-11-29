@@ -25,16 +25,14 @@ bool flag = 0;
 void readString(){
     scanf("%s%s", utilityName, option);
 
-    //сравнение на наличие опции (-n или -c) в аргументах 
-    // strncmp описана в functions.h, мне не понравилась как она работала в string.h
+    //сравнение на наличие опции (-n или -c) в аргументах
     if (strncmp(option, "-", 1)) {
         //опции нету
         copy(fileName, option);
         copy(option, "-n");
         digits = 10;
     }
-    else {
-        //опция есть, смотрим на наличие указателя на количество строк 
+    else { 
         scanf("%d", &digits);
         if (digits == 0) {
             digits = 10;
@@ -44,15 +42,10 @@ void readString(){
             scanf("%s", fileName);
         }
     }
-
-    // Внимание! Устаревший синтаксис! В большинстве версий head еще 
-    //поддерживается старый синтаксис -<количество строк>
-
     printf("Считано: (%s) (%s) (%d) (%s)\n", utilityName, option, digits, fileName);
 }
 
 //проверка введенных аргументов на корректность
-//комментарии излишни... ♔
 void checkArgs() {
     if (strncmp(utilityName, "head", 4)) {
         printf("%s%s%s\n", "No command ", utilityName, " found");
@@ -71,14 +64,12 @@ void checkArgs() {
         }
     }
 }
-
-//поработать над считыванием бинарных файлов 
+ 
 void Option() {
     if (!(strncmp(option, "-n", 2))) {
         char c;
         int count = 0;
         FILE* file;
-        //проверка файла в существовании не нуждается т.к. мы уже это делаем в checkArgs();
         file = fopen(fileName, "rb");
         printf("Все окей!\n");
 
@@ -95,14 +86,9 @@ void Option() {
     }
     // проверка если выбрана опция -с
     else {
-        //скорее всего для -c нужно будет как раз
-        //таки использоват getc, а для -n fread
-        //бинарные файлы не хотят считываться :(
-        //UPD: уже хотят ♔♔♔
         char c;
         int count = 0;
         FILE* file;
-        //проверка файла в существовании не нуждается т.к. мы уже это делаем в checkArgs();
         file = fopen(fileName, "rb");
         printf("Все окей!\n");
 
