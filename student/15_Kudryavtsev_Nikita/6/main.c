@@ -117,21 +117,24 @@ void delete(int key) {
 
 void printTree(Node *head, const char *dir, int level) {
     if (head) {
-        printf("lvl %d %s = %d\n", level, dir, head->key);
+        printf("lvl %d %s = %d,%d\n", level, dir, head->key, head->value);
         printTree(head->left, "left", level+1);
         printTree(head->right, "right", level+1);
     }
 }
 
 int main() {
-    create_root(10, 5);
-    add(12, 6);
-    add(8, 4);
-    add(9, 7);
-    add(7, 3);
-    add(4, 2);
-    delete(12);
-    delete(8);
+    create_root(10, 10);
+    add(8, 8);
+    add(12, 12);
+    add(7, 7);
+    add(9, 9);
+    add(11, 11);
+    add(29, 29);
+    add(4, 4);
+    printf("------------------\n");
+    printTree(root, "root", 0);
+    delete(10);
     printf("%d\n", try_find(12));
     printf("%d\n", find(9));
     printf("------------------\n");
