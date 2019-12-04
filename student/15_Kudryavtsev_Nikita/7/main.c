@@ -43,7 +43,7 @@ void two_pointer(int x) {
     Node a, b;
     a = list;
     b = list;
-    while (labs(b - a) / 2 != x) a = a->next;
+    while (a->data != x) a = a->next;
     while (a->next != NULL) {
         a = a->next;
         b = b->next;
