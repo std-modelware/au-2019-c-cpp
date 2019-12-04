@@ -32,7 +32,7 @@ int main() {
 
     float **firstMat = ReadNewMatrixInCurrentFile(i1, j1, file);
     float **secondMat = ReadNewMatrixInCurrentFile(i2, j2, file);
-
+    printf("============================================\n\n");
     if (i1 == i2 && j1 == j2) {
         printf("Addition: \n");
         for (int j = 0; j < j1; j++) {
@@ -42,7 +42,7 @@ int main() {
             printf("\n");
         }
         printf("\n");
-    }
+    } else printf("Addition: matrix sizes are not equal\n\n");
 
     if (i1 == j2) {
         printf("Multiplication: \n");
@@ -56,6 +56,6 @@ int main() {
             }
             printf("\n");
         }
-    }
+    } else printf("Multiplication: the number of columns of matrix a is not equal to the number of rows B\n");
     return 0;
 }
