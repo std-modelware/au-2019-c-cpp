@@ -6,6 +6,13 @@ int exists(const char *fname) {
     }
     return 0;
 }
+
+int copy(char *__s1, char *__s2) {
+    for (int i = 0; i < 100; i++) {
+        __s1[i] = __s2[i];
+    }
+}
+// реализация функции из билиотеки string.h чисто для прикола
 int strncmp(const char *__s1, const char *__s2, size_t __n) {
     bool flag = 0;
     for (int i = 0; i < __n; i++) {
