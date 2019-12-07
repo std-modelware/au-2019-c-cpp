@@ -8,11 +8,11 @@ struct node {
     Node left, right;
 };
 
-void TraversalPrint(Node root) {
+void TraversalPrint(Node root, char *leftright) {
     if (root != NULL) {
-        printf("%d %d\n", root->key, root->value);
-        TraversalPrint(root->left);
-        TraversalPrint(root->right);
+        printf("%d %d %s\n", root->key, root->value, leftright);
+        TraversalPrint(root->left, "Left");
+        TraversalPrint(root->right, "Right");
     }
 }
 
@@ -94,6 +94,7 @@ void Remove(Node *root, int key) {
         Node temp = MinValueNode((*root)->right);
 
         (*root)->key = temp->key;
+        (*root)->value = temp->value;
 
         Remove(&(*root)->right, temp->key);
     }
@@ -107,10 +108,11 @@ int main() {
     Insert(&root, 2, 102);
     Insert(&root, 8, 103);
     Insert(&root, 5, 1049);
+    Insert(&root, 4, 12992);
 //    Insert(&root, 4, 102);
     Insert(&root, 6, 1929);
     // Tests
-    TraversalPrint(root);
+    TraversalPrint(root, "Root");
     printf("Found: %d %d\n",
            SuperFind(root, 8, 0),
            SuperFind(root, 8, 1));
@@ -119,7 +121,7 @@ int main() {
            SuperFind(root, 666, 1));
 
     Remove(&root, 3);
-    TraversalPrint(root);
+    TraversalPrint(root, "Root");
 
     return 0;
 }

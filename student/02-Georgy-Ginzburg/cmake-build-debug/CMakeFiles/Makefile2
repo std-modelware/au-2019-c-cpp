@@ -44,37 +44,33 @@ RM = /opt/clion/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg
+CMAKE_SOURCE_DIR = /home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug
+CMAKE_BINARY_DIR = /home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/myutil.dir/all
 all: CMakeFiles/stack.dir/all
-all: CMakeFiles/copyfile.dir/all
-all: CMakeFiles/double_linked_with_init.dir/all
-all: CMakeFiles/2.dir/all
-all: CMakeFiles/1.dir/all
-all: CMakeFiles/03.dir/all
-all: CMakeFiles/04.dir/all
-all: CMakeFiles/double_linked.dir/all
-all: CMakeFiles/single_linked.dir/all
+all: CMakeFiles/queue.dir/all
+all: CMakeFiles/double_linked_with_arbitrary_args.dir/all
+all: CMakeFiles/binary_tree.dir/all
+all: CMakeFiles/matrices.dir/all
+all: CMakeFiles/list_traversals.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
+clean: CMakeFiles/myutil.dir/clean
 clean: CMakeFiles/stack.dir/clean
-clean: CMakeFiles/copyfile.dir/clean
-clean: CMakeFiles/double_linked_with_init.dir/clean
-clean: CMakeFiles/2.dir/clean
-clean: CMakeFiles/1.dir/clean
-clean: CMakeFiles/03.dir/clean
-clean: CMakeFiles/04.dir/clean
-clean: CMakeFiles/double_linked.dir/clean
-clean: CMakeFiles/single_linked.dir/clean
+clean: CMakeFiles/queue.dir/clean
+clean: CMakeFiles/double_linked_with_arbitrary_args.dir/clean
+clean: CMakeFiles/binary_tree.dir/clean
+clean: CMakeFiles/matrices.dir/clean
+clean: CMakeFiles/list_traversals.dir/clean
 
 .PHONY : clean
 
@@ -84,20 +80,47 @@ preinstall:
 .PHONY : preinstall
 
 #=============================================================================
+# Target rules for target CMakeFiles/myutil.dir
+
+# All Build rule for target.
+CMakeFiles/myutil.dir/all:
+	$(MAKE) -f CMakeFiles/myutil.dir/build.make CMakeFiles/myutil.dir/depend
+	$(MAKE) -f CMakeFiles/myutil.dir/build.make CMakeFiles/myutil.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target myutil"
+.PHONY : CMakeFiles/myutil.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/myutil.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/myutil.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/myutil.dir/rule
+
+# Convenience name for target.
+myutil: CMakeFiles/myutil.dir/rule
+
+.PHONY : myutil
+
+# clean rule for target.
+CMakeFiles/myutil.dir/clean:
+	$(MAKE) -f CMakeFiles/myutil.dir/build.make CMakeFiles/myutil.dir/clean
+.PHONY : CMakeFiles/myutil.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/stack.dir
 
 # All Build rule for target.
 CMakeFiles/stack.dir/all:
 	$(MAKE) -f CMakeFiles/stack.dir/build.make CMakeFiles/stack.dir/depend
 	$(MAKE) -f CMakeFiles/stack.dir/build.make CMakeFiles/stack.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles --progress-num=17,18 "Built target stack"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles --progress-num=14,15 "Built target stack"
 .PHONY : CMakeFiles/stack.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/stack.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/stack.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/stack.dir/rule
 
 # Convenience name for target.
@@ -111,220 +134,139 @@ CMakeFiles/stack.dir/clean:
 .PHONY : CMakeFiles/stack.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/copyfile.dir
+# Target rules for target CMakeFiles/queue.dir
 
 # All Build rule for target.
-CMakeFiles/copyfile.dir/all:
-	$(MAKE) -f CMakeFiles/copyfile.dir/build.make CMakeFiles/copyfile.dir/depend
-	$(MAKE) -f CMakeFiles/copyfile.dir/build.make CMakeFiles/copyfile.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target copyfile"
-.PHONY : CMakeFiles/copyfile.dir/all
+CMakeFiles/queue.dir/all:
+	$(MAKE) -f CMakeFiles/queue.dir/build.make CMakeFiles/queue.dir/depend
+	$(MAKE) -f CMakeFiles/queue.dir/build.make CMakeFiles/queue.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles --progress-num=11,12,13 "Built target queue"
+.PHONY : CMakeFiles/queue.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/copyfile.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/copyfile.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/copyfile.dir/rule
+CMakeFiles/queue.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/queue.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/queue.dir/rule
 
 # Convenience name for target.
-copyfile: CMakeFiles/copyfile.dir/rule
+queue: CMakeFiles/queue.dir/rule
 
-.PHONY : copyfile
+.PHONY : queue
 
 # clean rule for target.
-CMakeFiles/copyfile.dir/clean:
-	$(MAKE) -f CMakeFiles/copyfile.dir/build.make CMakeFiles/copyfile.dir/clean
-.PHONY : CMakeFiles/copyfile.dir/clean
+CMakeFiles/queue.dir/clean:
+	$(MAKE) -f CMakeFiles/queue.dir/build.make CMakeFiles/queue.dir/clean
+.PHONY : CMakeFiles/queue.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/double_linked_with_init.dir
+# Target rules for target CMakeFiles/double_linked_with_arbitrary_args.dir
 
 # All Build rule for target.
-CMakeFiles/double_linked_with_init.dir/all:
-	$(MAKE) -f CMakeFiles/double_linked_with_init.dir/build.make CMakeFiles/double_linked_with_init.dir/depend
-	$(MAKE) -f CMakeFiles/double_linked_with_init.dir/build.make CMakeFiles/double_linked_with_init.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target double_linked_with_init"
-.PHONY : CMakeFiles/double_linked_with_init.dir/all
+CMakeFiles/double_linked_with_arbitrary_args.dir/all:
+	$(MAKE) -f CMakeFiles/double_linked_with_arbitrary_args.dir/build.make CMakeFiles/double_linked_with_arbitrary_args.dir/depend
+	$(MAKE) -f CMakeFiles/double_linked_with_arbitrary_args.dir/build.make CMakeFiles/double_linked_with_arbitrary_args.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target double_linked_with_arbitrary_args"
+.PHONY : CMakeFiles/double_linked_with_arbitrary_args.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/double_linked_with_init.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/double_linked_with_init.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/double_linked_with_init.dir/rule
+CMakeFiles/double_linked_with_arbitrary_args.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/double_linked_with_arbitrary_args.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/double_linked_with_arbitrary_args.dir/rule
 
 # Convenience name for target.
-double_linked_with_init: CMakeFiles/double_linked_with_init.dir/rule
+double_linked_with_arbitrary_args: CMakeFiles/double_linked_with_arbitrary_args.dir/rule
 
-.PHONY : double_linked_with_init
+.PHONY : double_linked_with_arbitrary_args
 
 # clean rule for target.
-CMakeFiles/double_linked_with_init.dir/clean:
-	$(MAKE) -f CMakeFiles/double_linked_with_init.dir/build.make CMakeFiles/double_linked_with_init.dir/clean
-.PHONY : CMakeFiles/double_linked_with_init.dir/clean
+CMakeFiles/double_linked_with_arbitrary_args.dir/clean:
+	$(MAKE) -f CMakeFiles/double_linked_with_arbitrary_args.dir/build.make CMakeFiles/double_linked_with_arbitrary_args.dir/clean
+.PHONY : CMakeFiles/double_linked_with_arbitrary_args.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/2.dir
+# Target rules for target CMakeFiles/binary_tree.dir
 
 # All Build rule for target.
-CMakeFiles/2.dir/all:
-	$(MAKE) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/depend
-	$(MAKE) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target 2"
-.PHONY : CMakeFiles/2.dir/all
+CMakeFiles/binary_tree.dir/all:
+	$(MAKE) -f CMakeFiles/binary_tree.dir/build.make CMakeFiles/binary_tree.dir/depend
+	$(MAKE) -f CMakeFiles/binary_tree.dir/build.make CMakeFiles/binary_tree.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target binary_tree"
+.PHONY : CMakeFiles/binary_tree.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/2.dir/rule
+CMakeFiles/binary_tree.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/binary_tree.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/binary_tree.dir/rule
 
 # Convenience name for target.
-2 : CMakeFiles/2.dir/rule
+binary_tree: CMakeFiles/binary_tree.dir/rule
 
-.PHONY : 2
+.PHONY : binary_tree
 
 # clean rule for target.
-CMakeFiles/2.dir/clean:
-	$(MAKE) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/clean
-.PHONY : CMakeFiles/2.dir/clean
+CMakeFiles/binary_tree.dir/clean:
+	$(MAKE) -f CMakeFiles/binary_tree.dir/build.make CMakeFiles/binary_tree.dir/clean
+.PHONY : CMakeFiles/binary_tree.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/1.dir
+# Target rules for target CMakeFiles/matrices.dir
 
 # All Build rule for target.
-CMakeFiles/1.dir/all:
-	$(MAKE) -f CMakeFiles/1.dir/build.make CMakeFiles/1.dir/depend
-	$(MAKE) -f CMakeFiles/1.dir/build.make CMakeFiles/1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target 1"
-.PHONY : CMakeFiles/1.dir/all
+CMakeFiles/matrices.dir/all:
+	$(MAKE) -f CMakeFiles/matrices.dir/build.make CMakeFiles/matrices.dir/depend
+	$(MAKE) -f CMakeFiles/matrices.dir/build.make CMakeFiles/matrices.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target matrices"
+.PHONY : CMakeFiles/matrices.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/1.dir/rule
+CMakeFiles/matrices.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/matrices.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/matrices.dir/rule
 
 # Convenience name for target.
-1 : CMakeFiles/1.dir/rule
+matrices: CMakeFiles/matrices.dir/rule
 
-.PHONY : 1
+.PHONY : matrices
 
 # clean rule for target.
-CMakeFiles/1.dir/clean:
-	$(MAKE) -f CMakeFiles/1.dir/build.make CMakeFiles/1.dir/clean
-.PHONY : CMakeFiles/1.dir/clean
+CMakeFiles/matrices.dir/clean:
+	$(MAKE) -f CMakeFiles/matrices.dir/build.make CMakeFiles/matrices.dir/clean
+.PHONY : CMakeFiles/matrices.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/03.dir
+# Target rules for target CMakeFiles/list_traversals.dir
 
 # All Build rule for target.
-CMakeFiles/03.dir/all:
-	$(MAKE) -f CMakeFiles/03.dir/build.make CMakeFiles/03.dir/depend
-	$(MAKE) -f CMakeFiles/03.dir/build.make CMakeFiles/03.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target 03"
-.PHONY : CMakeFiles/03.dir/all
+CMakeFiles/list_traversals.dir/all:
+	$(MAKE) -f CMakeFiles/list_traversals.dir/build.make CMakeFiles/list_traversals.dir/depend
+	$(MAKE) -f CMakeFiles/list_traversals.dir/build.make CMakeFiles/list_traversals.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target list_traversals"
+.PHONY : CMakeFiles/list_traversals.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/03.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/03.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/03.dir/rule
+CMakeFiles/list_traversals.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/list_traversals.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/list_traversals.dir/rule
 
 # Convenience name for target.
-03: CMakeFiles/03.dir/rule
+list_traversals: CMakeFiles/list_traversals.dir/rule
 
-.PHONY : 03
-
-# clean rule for target.
-CMakeFiles/03.dir/clean:
-	$(MAKE) -f CMakeFiles/03.dir/build.make CMakeFiles/03.dir/clean
-.PHONY : CMakeFiles/03.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/04.dir
-
-# All Build rule for target.
-CMakeFiles/04.dir/all:
-	$(MAKE) -f CMakeFiles/04.dir/build.make CMakeFiles/04.dir/depend
-	$(MAKE) -f CMakeFiles/04.dir/build.make CMakeFiles/04.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target 04"
-.PHONY : CMakeFiles/04.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/04.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/04.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/04.dir/rule
-
-# Convenience name for target.
-04: CMakeFiles/04.dir/rule
-
-.PHONY : 04
+.PHONY : list_traversals
 
 # clean rule for target.
-CMakeFiles/04.dir/clean:
-	$(MAKE) -f CMakeFiles/04.dir/build.make CMakeFiles/04.dir/clean
-.PHONY : CMakeFiles/04.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/double_linked.dir
-
-# All Build rule for target.
-CMakeFiles/double_linked.dir/all:
-	$(MAKE) -f CMakeFiles/double_linked.dir/build.make CMakeFiles/double_linked.dir/depend
-	$(MAKE) -f CMakeFiles/double_linked.dir/build.make CMakeFiles/double_linked.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target double_linked"
-.PHONY : CMakeFiles/double_linked.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/double_linked.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/double_linked.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/double_linked.dir/rule
-
-# Convenience name for target.
-double_linked: CMakeFiles/double_linked.dir/rule
-
-.PHONY : double_linked
-
-# clean rule for target.
-CMakeFiles/double_linked.dir/clean:
-	$(MAKE) -f CMakeFiles/double_linked.dir/build.make CMakeFiles/double_linked.dir/clean
-.PHONY : CMakeFiles/double_linked.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/single_linked.dir
-
-# All Build rule for target.
-CMakeFiles/single_linked.dir/all:
-	$(MAKE) -f CMakeFiles/single_linked.dir/build.make CMakeFiles/single_linked.dir/depend
-	$(MAKE) -f CMakeFiles/single_linked.dir/build.make CMakeFiles/single_linked.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target single_linked"
-.PHONY : CMakeFiles/single_linked.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/single_linked.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/single_linked.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/single_linked.dir/rule
-
-# Convenience name for target.
-single_linked: CMakeFiles/single_linked.dir/rule
-
-.PHONY : single_linked
-
-# clean rule for target.
-CMakeFiles/single_linked.dir/clean:
-	$(MAKE) -f CMakeFiles/single_linked.dir/build.make CMakeFiles/single_linked.dir/clean
-.PHONY : CMakeFiles/single_linked.dir/clean
+CMakeFiles/list_traversals.dir/clean:
+	$(MAKE) -f CMakeFiles/list_traversals.dir/build.make CMakeFiles/list_traversals.dir/clean
+.PHONY : CMakeFiles/list_traversals.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

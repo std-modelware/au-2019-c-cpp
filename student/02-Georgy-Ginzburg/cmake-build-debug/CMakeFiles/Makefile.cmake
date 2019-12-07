@@ -44,13 +44,11 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/myutil.dir/DependInfo.cmake"
   "CMakeFiles/stack.dir/DependInfo.cmake"
-  "CMakeFiles/copyfile.dir/DependInfo.cmake"
-  "CMakeFiles/double_linked_with_init.dir/DependInfo.cmake"
-  "CMakeFiles/2.dir/DependInfo.cmake"
-  "CMakeFiles/1.dir/DependInfo.cmake"
-  "CMakeFiles/03.dir/DependInfo.cmake"
-  "CMakeFiles/04.dir/DependInfo.cmake"
-  "CMakeFiles/double_linked.dir/DependInfo.cmake"
-  "CMakeFiles/single_linked.dir/DependInfo.cmake"
+  "CMakeFiles/queue.dir/DependInfo.cmake"
+  "CMakeFiles/double_linked_with_arbitrary_args.dir/DependInfo.cmake"
+  "CMakeFiles/binary_tree.dir/DependInfo.cmake"
+  "CMakeFiles/matrices.dir/DependInfo.cmake"
+  "CMakeFiles/list_traversals.dir/DependInfo.cmake"
   )

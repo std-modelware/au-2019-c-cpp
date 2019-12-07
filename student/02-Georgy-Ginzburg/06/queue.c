@@ -25,7 +25,7 @@ PriorityQueue au_enqueue(PriorityQueue heap, char item, int priority) {
     heap.Size++;
     size_t i = heap.Size;
     size_t j = i / 2;
-    while (i > 1 && heap.Arr[j].priority <= priority) {
+    while (i > 1 && heap.Arr[j].priority < priority) {
         heap.Arr[i] = heap.Arr[j];
         i = j;
         j /= 2;

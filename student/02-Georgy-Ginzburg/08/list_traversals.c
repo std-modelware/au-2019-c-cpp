@@ -61,25 +61,36 @@ void TwoPointerTraversal(node list, int k) {
     printf("%d-th element with TwoPointerTraversal: %d\n", k, q->next->data);
 }
 
-void RecursiveTraversal(node list, int k, int k_upd) {
-    // On the first run k == k_upd
-    if (k_upd == 0) {
-        printf("%d-th element with RecursiveTraversal: %d\n", k, list->data);
+void RecursiveTraversal(node head, node *p, int k, int *count) {
+    if (head == NULL)
         return;
-    }
-    RecursiveTraversal(list->next, k, k_upd - 1);
+
+    RecursiveTraversal(head->next, p, k, count);
+    *count += 1;
+
+    if (*count == k)
+        *p = head;
 }
+
+void RecursiveTraversalWrapper(node list, int k) {
+    node p = NULL;
+    int count = 0;
+
+    RecursiveTraversal(list, &p, k, &count);
+    printf("%d\n", p->data);
+}
+
 
 int main() {
     int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    int l = (int) sizeof(arr) / sizeof(arr[0]);
+    int length = (int) sizeof(arr) / sizeof(arr[0]);
     node list = NULL;
-    CreateList(&list, arr, l);
+    CreateList(&list, arr, length);
     for (node iter = list; iter != NULL; iter = iter->next) {
         printf("%d ", iter->data);
     }
     printf("\n");
     TwoPassTraversal(list, 4);
     TwoPointerTraversal(list, 2);
-    RecursiveTraversal(list, 5, 5);
+    RecursiveTraversalWrapper(list, 6);
 }

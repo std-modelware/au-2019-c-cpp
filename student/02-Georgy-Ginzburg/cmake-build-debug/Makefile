@@ -48,10 +48,10 @@ RM = /opt/clion/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg
+CMAKE_SOURCE_DIR = /home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug
+CMAKE_BINARY_DIR = /home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles /home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named myutil
+
+# Build rule for target.
+myutil: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 myutil
+.PHONY : myutil
+
+# fast build rule for target.
+myutil/fast:
+	$(MAKE) -f CMakeFiles/myutil.dir/build.make CMakeFiles/myutil.dir/build
+.PHONY : myutil/fast
+
+#=============================================================================
 # Target rules for targets named stack
 
 # Build rule for target.
@@ -124,273 +137,69 @@ stack/fast:
 .PHONY : stack/fast
 
 #=============================================================================
-# Target rules for targets named copyfile
+# Target rules for targets named queue
 
 # Build rule for target.
-copyfile: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 copyfile
-.PHONY : copyfile
+queue: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 queue
+.PHONY : queue
 
 # fast build rule for target.
-copyfile/fast:
-	$(MAKE) -f CMakeFiles/copyfile.dir/build.make CMakeFiles/copyfile.dir/build
-.PHONY : copyfile/fast
+queue/fast:
+	$(MAKE) -f CMakeFiles/queue.dir/build.make CMakeFiles/queue.dir/build
+.PHONY : queue/fast
 
 #=============================================================================
-# Target rules for targets named double_linked_with_init
+# Target rules for targets named double_linked_with_arbitrary_args
 
 # Build rule for target.
-double_linked_with_init: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 double_linked_with_init
-.PHONY : double_linked_with_init
+double_linked_with_arbitrary_args: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 double_linked_with_arbitrary_args
+.PHONY : double_linked_with_arbitrary_args
 
 # fast build rule for target.
-double_linked_with_init/fast:
-	$(MAKE) -f CMakeFiles/double_linked_with_init.dir/build.make CMakeFiles/double_linked_with_init.dir/build
-.PHONY : double_linked_with_init/fast
+double_linked_with_arbitrary_args/fast:
+	$(MAKE) -f CMakeFiles/double_linked_with_arbitrary_args.dir/build.make CMakeFiles/double_linked_with_arbitrary_args.dir/build
+.PHONY : double_linked_with_arbitrary_args/fast
 
 #=============================================================================
-# Target rules for targets named 2
+# Target rules for targets named binary_tree
 
 # Build rule for target.
-2 : cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 2
-.PHONY : 2
+binary_tree: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 binary_tree
+.PHONY : binary_tree
 
 # fast build rule for target.
-2/fast:
-	$(MAKE) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/build
-.PHONY : 2/fast
+binary_tree/fast:
+	$(MAKE) -f CMakeFiles/binary_tree.dir/build.make CMakeFiles/binary_tree.dir/build
+.PHONY : binary_tree/fast
 
 #=============================================================================
-# Target rules for targets named 1
+# Target rules for targets named matrices
 
 # Build rule for target.
-1 : cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 1
-.PHONY : 1
+matrices: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 matrices
+.PHONY : matrices
 
 # fast build rule for target.
-1/fast:
-	$(MAKE) -f CMakeFiles/1.dir/build.make CMakeFiles/1.dir/build
-.PHONY : 1/fast
+matrices/fast:
+	$(MAKE) -f CMakeFiles/matrices.dir/build.make CMakeFiles/matrices.dir/build
+.PHONY : matrices/fast
 
 #=============================================================================
-# Target rules for targets named 03
+# Target rules for targets named list_traversals
 
 # Build rule for target.
-03: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 03
-.PHONY : 03
+list_traversals: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 list_traversals
+.PHONY : list_traversals
 
 # fast build rule for target.
-03/fast:
-	$(MAKE) -f CMakeFiles/03.dir/build.make CMakeFiles/03.dir/build
-.PHONY : 03/fast
-
-#=============================================================================
-# Target rules for targets named 04
-
-# Build rule for target.
-04: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 04
-.PHONY : 04
-
-# fast build rule for target.
-04/fast:
-	$(MAKE) -f CMakeFiles/04.dir/build.make CMakeFiles/04.dir/build
-.PHONY : 04/fast
-
-#=============================================================================
-# Target rules for targets named double_linked
-
-# Build rule for target.
-double_linked: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 double_linked
-.PHONY : double_linked
-
-# fast build rule for target.
-double_linked/fast:
-	$(MAKE) -f CMakeFiles/double_linked.dir/build.make CMakeFiles/double_linked.dir/build
-.PHONY : double_linked/fast
-
-#=============================================================================
-# Target rules for targets named single_linked
-
-# Build rule for target.
-single_linked: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 single_linked
-.PHONY : single_linked
-
-# fast build rule for target.
-single_linked/fast:
-	$(MAKE) -f CMakeFiles/single_linked.dir/build.make CMakeFiles/single_linked.dir/build
-.PHONY : single_linked/fast
-
-01/1.o: 01/1.c.o
-
-.PHONY : 01/1.o
-
-# target to build an object file
-01/1.c.o:
-	$(MAKE) -f CMakeFiles/1.dir/build.make CMakeFiles/1.dir/01/1.c.o
-.PHONY : 01/1.c.o
-
-01/1.i: 01/1.c.i
-
-.PHONY : 01/1.i
-
-# target to preprocess a source file
-01/1.c.i:
-	$(MAKE) -f CMakeFiles/1.dir/build.make CMakeFiles/1.dir/01/1.c.i
-.PHONY : 01/1.c.i
-
-01/1.s: 01/1.c.s
-
-.PHONY : 01/1.s
-
-# target to generate assembly for a file
-01/1.c.s:
-	$(MAKE) -f CMakeFiles/1.dir/build.make CMakeFiles/1.dir/01/1.c.s
-.PHONY : 01/1.c.s
-
-02/2.o: 02/2.c.o
-
-.PHONY : 02/2.o
-
-# target to build an object file
-02/2.c.o:
-	$(MAKE) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/02/2.c.o
-.PHONY : 02/2.c.o
-
-02/2.i: 02/2.c.i
-
-.PHONY : 02/2.i
-
-# target to preprocess a source file
-02/2.c.i:
-	$(MAKE) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/02/2.c.i
-.PHONY : 02/2.c.i
-
-02/2.s: 02/2.c.s
-
-.PHONY : 02/2.s
-
-# target to generate assembly for a file
-02/2.c.s:
-	$(MAKE) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/02/2.c.s
-.PHONY : 02/2.c.s
-
-03/03.o: 03/03.c.o
-
-.PHONY : 03/03.o
-
-# target to build an object file
-03/03.c.o:
-	$(MAKE) -f CMakeFiles/03.dir/build.make CMakeFiles/03.dir/03/03.c.o
-.PHONY : 03/03.c.o
-
-03/03.i: 03/03.c.i
-
-.PHONY : 03/03.i
-
-# target to preprocess a source file
-03/03.c.i:
-	$(MAKE) -f CMakeFiles/03.dir/build.make CMakeFiles/03.dir/03/03.c.i
-.PHONY : 03/03.c.i
-
-03/03.s: 03/03.c.s
-
-.PHONY : 03/03.s
-
-# target to generate assembly for a file
-03/03.c.s:
-	$(MAKE) -f CMakeFiles/03.dir/build.make CMakeFiles/03.dir/03/03.c.s
-.PHONY : 03/03.c.s
-
-04/double_linked.o: 04/double_linked.c.o
-
-.PHONY : 04/double_linked.o
-
-# target to build an object file
-04/double_linked.c.o:
-	$(MAKE) -f CMakeFiles/double_linked.dir/build.make CMakeFiles/double_linked.dir/04/double_linked.c.o
-.PHONY : 04/double_linked.c.o
-
-04/double_linked.i: 04/double_linked.c.i
-
-.PHONY : 04/double_linked.i
-
-# target to preprocess a source file
-04/double_linked.c.i:
-	$(MAKE) -f CMakeFiles/double_linked.dir/build.make CMakeFiles/double_linked.dir/04/double_linked.c.i
-.PHONY : 04/double_linked.c.i
-
-04/double_linked.s: 04/double_linked.c.s
-
-.PHONY : 04/double_linked.s
-
-# target to generate assembly for a file
-04/double_linked.c.s:
-	$(MAKE) -f CMakeFiles/double_linked.dir/build.make CMakeFiles/double_linked.dir/04/double_linked.c.s
-.PHONY : 04/double_linked.c.s
-
-04/single_linked.o: 04/single_linked.c.o
-
-.PHONY : 04/single_linked.o
-
-# target to build an object file
-04/single_linked.c.o:
-	$(MAKE) -f CMakeFiles/04.dir/build.make CMakeFiles/04.dir/04/single_linked.c.o
-	$(MAKE) -f CMakeFiles/single_linked.dir/build.make CMakeFiles/single_linked.dir/04/single_linked.c.o
-.PHONY : 04/single_linked.c.o
-
-04/single_linked.i: 04/single_linked.c.i
-
-.PHONY : 04/single_linked.i
-
-# target to preprocess a source file
-04/single_linked.c.i:
-	$(MAKE) -f CMakeFiles/04.dir/build.make CMakeFiles/04.dir/04/single_linked.c.i
-	$(MAKE) -f CMakeFiles/single_linked.dir/build.make CMakeFiles/single_linked.dir/04/single_linked.c.i
-.PHONY : 04/single_linked.c.i
-
-04/single_linked.s: 04/single_linked.c.s
-
-.PHONY : 04/single_linked.s
-
-# target to generate assembly for a file
-04/single_linked.c.s:
-	$(MAKE) -f CMakeFiles/04.dir/build.make CMakeFiles/04.dir/04/single_linked.c.s
-	$(MAKE) -f CMakeFiles/single_linked.dir/build.make CMakeFiles/single_linked.dir/04/single_linked.c.s
-.PHONY : 04/single_linked.c.s
-
-05/copyfile.o: 05/copyfile.c.o
-
-.PHONY : 05/copyfile.o
-
-# target to build an object file
-05/copyfile.c.o:
-	$(MAKE) -f CMakeFiles/copyfile.dir/build.make CMakeFiles/copyfile.dir/05/copyfile.c.o
-.PHONY : 05/copyfile.c.o
-
-05/copyfile.i: 05/copyfile.c.i
-
-.PHONY : 05/copyfile.i
-
-# target to preprocess a source file
-05/copyfile.c.i:
-	$(MAKE) -f CMakeFiles/copyfile.dir/build.make CMakeFiles/copyfile.dir/05/copyfile.c.i
-.PHONY : 05/copyfile.c.i
-
-05/copyfile.s: 05/copyfile.c.s
-
-.PHONY : 05/copyfile.s
-
-# target to generate assembly for a file
-05/copyfile.c.s:
-	$(MAKE) -f CMakeFiles/copyfile.dir/build.make CMakeFiles/copyfile.dir/05/copyfile.c.s
-.PHONY : 05/copyfile.c.s
+list_traversals/fast:
+	$(MAKE) -f CMakeFiles/list_traversals.dir/build.make CMakeFiles/list_traversals.dir/build
+.PHONY : list_traversals/fast
 
 05/double_linked_with_arbitrary_args.o: 05/double_linked_with_arbitrary_args.c.o
 
@@ -398,7 +207,7 @@ single_linked/fast:
 
 # target to build an object file
 05/double_linked_with_arbitrary_args.c.o:
-	$(MAKE) -f CMakeFiles/double_linked_with_init.dir/build.make CMakeFiles/double_linked_with_init.dir/05/double_linked_with_arbitrary_args.c.o
+	$(MAKE) -f CMakeFiles/double_linked_with_arbitrary_args.dir/build.make CMakeFiles/double_linked_with_arbitrary_args.dir/05/double_linked_with_arbitrary_args.c.o
 .PHONY : 05/double_linked_with_arbitrary_args.c.o
 
 05/double_linked_with_arbitrary_args.i: 05/double_linked_with_arbitrary_args.c.i
@@ -407,7 +216,7 @@ single_linked/fast:
 
 # target to preprocess a source file
 05/double_linked_with_arbitrary_args.c.i:
-	$(MAKE) -f CMakeFiles/double_linked_with_init.dir/build.make CMakeFiles/double_linked_with_init.dir/05/double_linked_with_arbitrary_args.c.i
+	$(MAKE) -f CMakeFiles/double_linked_with_arbitrary_args.dir/build.make CMakeFiles/double_linked_with_arbitrary_args.dir/05/double_linked_with_arbitrary_args.c.i
 .PHONY : 05/double_linked_with_arbitrary_args.c.i
 
 05/double_linked_with_arbitrary_args.s: 05/double_linked_with_arbitrary_args.c.s
@@ -416,7 +225,7 @@ single_linked/fast:
 
 # target to generate assembly for a file
 05/double_linked_with_arbitrary_args.c.s:
-	$(MAKE) -f CMakeFiles/double_linked_with_init.dir/build.make CMakeFiles/double_linked_with_init.dir/05/double_linked_with_arbitrary_args.c.s
+	$(MAKE) -f CMakeFiles/double_linked_with_arbitrary_args.dir/build.make CMakeFiles/double_linked_with_arbitrary_args.dir/05/double_linked_with_arbitrary_args.c.s
 .PHONY : 05/double_linked_with_arbitrary_args.c.s
 
 05/stack.o: 05/stack.c.o
@@ -446,6 +255,168 @@ single_linked/fast:
 	$(MAKE) -f CMakeFiles/stack.dir/build.make CMakeFiles/stack.dir/05/stack.c.s
 .PHONY : 05/stack.c.s
 
+06/main.o: 06/main.c.o
+
+.PHONY : 06/main.o
+
+# target to build an object file
+06/main.c.o:
+	$(MAKE) -f CMakeFiles/queue.dir/build.make CMakeFiles/queue.dir/06/main.c.o
+.PHONY : 06/main.c.o
+
+06/main.i: 06/main.c.i
+
+.PHONY : 06/main.i
+
+# target to preprocess a source file
+06/main.c.i:
+	$(MAKE) -f CMakeFiles/queue.dir/build.make CMakeFiles/queue.dir/06/main.c.i
+.PHONY : 06/main.c.i
+
+06/main.s: 06/main.c.s
+
+.PHONY : 06/main.s
+
+# target to generate assembly for a file
+06/main.c.s:
+	$(MAKE) -f CMakeFiles/queue.dir/build.make CMakeFiles/queue.dir/06/main.c.s
+.PHONY : 06/main.c.s
+
+06/queue.o: 06/queue.c.o
+
+.PHONY : 06/queue.o
+
+# target to build an object file
+06/queue.c.o:
+	$(MAKE) -f CMakeFiles/queue.dir/build.make CMakeFiles/queue.dir/06/queue.c.o
+.PHONY : 06/queue.c.o
+
+06/queue.i: 06/queue.c.i
+
+.PHONY : 06/queue.i
+
+# target to preprocess a source file
+06/queue.c.i:
+	$(MAKE) -f CMakeFiles/queue.dir/build.make CMakeFiles/queue.dir/06/queue.c.i
+.PHONY : 06/queue.c.i
+
+06/queue.s: 06/queue.c.s
+
+.PHONY : 06/queue.s
+
+# target to generate assembly for a file
+06/queue.c.s:
+	$(MAKE) -f CMakeFiles/queue.dir/build.make CMakeFiles/queue.dir/06/queue.c.s
+.PHONY : 06/queue.c.s
+
+07/binary_tree.o: 07/binary_tree.c.o
+
+.PHONY : 07/binary_tree.o
+
+# target to build an object file
+07/binary_tree.c.o:
+	$(MAKE) -f CMakeFiles/binary_tree.dir/build.make CMakeFiles/binary_tree.dir/07/binary_tree.c.o
+.PHONY : 07/binary_tree.c.o
+
+07/binary_tree.i: 07/binary_tree.c.i
+
+.PHONY : 07/binary_tree.i
+
+# target to preprocess a source file
+07/binary_tree.c.i:
+	$(MAKE) -f CMakeFiles/binary_tree.dir/build.make CMakeFiles/binary_tree.dir/07/binary_tree.c.i
+.PHONY : 07/binary_tree.c.i
+
+07/binary_tree.s: 07/binary_tree.c.s
+
+.PHONY : 07/binary_tree.s
+
+# target to generate assembly for a file
+07/binary_tree.c.s:
+	$(MAKE) -f CMakeFiles/binary_tree.dir/build.make CMakeFiles/binary_tree.dir/07/binary_tree.c.s
+.PHONY : 07/binary_tree.c.s
+
+08/list_traversals.o: 08/list_traversals.c.o
+
+.PHONY : 08/list_traversals.o
+
+# target to build an object file
+08/list_traversals.c.o:
+	$(MAKE) -f CMakeFiles/list_traversals.dir/build.make CMakeFiles/list_traversals.dir/08/list_traversals.c.o
+.PHONY : 08/list_traversals.c.o
+
+08/list_traversals.i: 08/list_traversals.c.i
+
+.PHONY : 08/list_traversals.i
+
+# target to preprocess a source file
+08/list_traversals.c.i:
+	$(MAKE) -f CMakeFiles/list_traversals.dir/build.make CMakeFiles/list_traversals.dir/08/list_traversals.c.i
+.PHONY : 08/list_traversals.c.i
+
+08/list_traversals.s: 08/list_traversals.c.s
+
+.PHONY : 08/list_traversals.s
+
+# target to generate assembly for a file
+08/list_traversals.c.s:
+	$(MAKE) -f CMakeFiles/list_traversals.dir/build.make CMakeFiles/list_traversals.dir/08/list_traversals.c.s
+.PHONY : 08/list_traversals.c.s
+
+08/matrices.o: 08/matrices.c.o
+
+.PHONY : 08/matrices.o
+
+# target to build an object file
+08/matrices.c.o:
+	$(MAKE) -f CMakeFiles/matrices.dir/build.make CMakeFiles/matrices.dir/08/matrices.c.o
+.PHONY : 08/matrices.c.o
+
+08/matrices.i: 08/matrices.c.i
+
+.PHONY : 08/matrices.i
+
+# target to preprocess a source file
+08/matrices.c.i:
+	$(MAKE) -f CMakeFiles/matrices.dir/build.make CMakeFiles/matrices.dir/08/matrices.c.i
+.PHONY : 08/matrices.c.i
+
+08/matrices.s: 08/matrices.c.s
+
+.PHONY : 08/matrices.s
+
+# target to generate assembly for a file
+08/matrices.c.s:
+	$(MAKE) -f CMakeFiles/matrices.dir/build.make CMakeFiles/matrices.dir/08/matrices.c.s
+.PHONY : 08/matrices.c.s
+
+MyUtil/mytree.o: MyUtil/mytree.c.o
+
+.PHONY : MyUtil/mytree.o
+
+# target to build an object file
+MyUtil/mytree.c.o:
+	$(MAKE) -f CMakeFiles/myutil.dir/build.make CMakeFiles/myutil.dir/MyUtil/mytree.c.o
+.PHONY : MyUtil/mytree.c.o
+
+MyUtil/mytree.i: MyUtil/mytree.c.i
+
+.PHONY : MyUtil/mytree.i
+
+# target to preprocess a source file
+MyUtil/mytree.c.i:
+	$(MAKE) -f CMakeFiles/myutil.dir/build.make CMakeFiles/myutil.dir/MyUtil/mytree.c.i
+.PHONY : MyUtil/mytree.c.i
+
+MyUtil/mytree.s: MyUtil/mytree.c.s
+
+.PHONY : MyUtil/mytree.s
+
+# target to generate assembly for a file
+MyUtil/mytree.c.s:
+	$(MAKE) -f CMakeFiles/myutil.dir/build.make CMakeFiles/myutil.dir/MyUtil/mytree.c.s
+.PHONY : MyUtil/mytree.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -453,40 +424,38 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... myutil"
 	@echo "... stack"
-	@echo "... copyfile"
-	@echo "... double_linked_with_init"
-	@echo "... 2"
-	@echo "... 1"
+	@echo "... queue"
+	@echo "... double_linked_with_arbitrary_args"
+	@echo "... binary_tree"
+	@echo "... matrices"
 	@echo "... edit_cache"
-	@echo "... 03"
-	@echo "... 04"
-	@echo "... double_linked"
-	@echo "... single_linked"
-	@echo "... 01/1.o"
-	@echo "... 01/1.i"
-	@echo "... 01/1.s"
-	@echo "... 02/2.o"
-	@echo "... 02/2.i"
-	@echo "... 02/2.s"
-	@echo "... 03/03.o"
-	@echo "... 03/03.i"
-	@echo "... 03/03.s"
-	@echo "... 04/double_linked.o"
-	@echo "... 04/double_linked.i"
-	@echo "... 04/double_linked.s"
-	@echo "... 04/single_linked.o"
-	@echo "... 04/single_linked.i"
-	@echo "... 04/single_linked.s"
-	@echo "... 05/copyfile.o"
-	@echo "... 05/copyfile.i"
-	@echo "... 05/copyfile.s"
+	@echo "... list_traversals"
 	@echo "... 05/double_linked_with_arbitrary_args.o"
 	@echo "... 05/double_linked_with_arbitrary_args.i"
 	@echo "... 05/double_linked_with_arbitrary_args.s"
 	@echo "... 05/stack.o"
 	@echo "... 05/stack.i"
 	@echo "... 05/stack.s"
+	@echo "... 06/main.o"
+	@echo "... 06/main.i"
+	@echo "... 06/main.s"
+	@echo "... 06/queue.o"
+	@echo "... 06/queue.i"
+	@echo "... 06/queue.s"
+	@echo "... 07/binary_tree.o"
+	@echo "... 07/binary_tree.i"
+	@echo "... 07/binary_tree.s"
+	@echo "... 08/list_traversals.o"
+	@echo "... 08/list_traversals.i"
+	@echo "... 08/list_traversals.s"
+	@echo "... 08/matrices.o"
+	@echo "... 08/matrices.i"
+	@echo "... 08/matrices.s"
+	@echo "... MyUtil/mytree.o"
+	@echo "... MyUtil/mytree.i"
+	@echo "... MyUtil/mytree.s"
 .PHONY : help
 
 

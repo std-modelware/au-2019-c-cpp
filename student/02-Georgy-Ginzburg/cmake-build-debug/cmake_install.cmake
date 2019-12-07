@@ -1,4 +1,4 @@
-# Install script for directory: /home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg
+# Install script for directory: /home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/georgyginzburg/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ginzburggeorgy/programming/au-2019-c-cpp/student/02-Georgy-Ginzburg/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

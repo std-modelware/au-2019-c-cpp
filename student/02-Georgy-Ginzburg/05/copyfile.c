@@ -33,7 +33,8 @@ void StringWiseCopy(char *argv[]) {
     while (fgets(chunk, sizeof(chunk), fFrom) != NULL) {
         fputs(chunk, fTo);
     }
-    fclose(fTo);
+    fclose(fTo)
+    ap.S;
     fclose(fFrom);
 }
 
@@ -48,7 +49,7 @@ void FullCopy(char *argv[]) {
 }
 
 void ShowHelp() {
-    printf("%s", "Usage: ./copyfile [OPTION] [FILE TO COPY FROM] [FILE TO COPY TO]\n\n"
+    printf("%s", "Usage: ./copyfile [OPTION] [FILE TO COPY FROM/FILENAME ON CREATION] [FILE TO COPY TO]\n\n"
                  "-h            Help\n"
                  "-n            Create new file and write CLI contents\n"
                  "-s            Copy a file symbol-wise\n"

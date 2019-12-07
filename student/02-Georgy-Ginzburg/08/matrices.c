@@ -42,8 +42,8 @@ int main() {
     Matrix mat2 = CreateMatrix(ReadArrayFromFile(file2, n2, m2), n2, m2);
     PrintMatrix(mat2);
     printf("\n");
-    printf("Matrix sum: \n");
-    PrintMatrix(MatrixAddition(mat1, mat2));
+//    printf("Matrix sum: \n");
+//    PrintMatrix(MatrixAddition(mat1, mat2));
 
     printf("Matrix product: \n");
     PrintMatrix(MatrixMultiplication(mat1, mat2));
@@ -72,13 +72,13 @@ float **ReadArrayFromFile(FILE *fp, int num_rows, int num_cols) {
 
     float **vals = calloc(num_rows, sizeof(float));
 
-    for (int i = 0; i < num_cols; i++) {
+    for (int i = 0; i < num_rows; i++) {
         vals[i] = calloc(num_cols, sizeof(float));
     }
 
     for (int i = 0; i < num_rows; i++) {
         for (int j = 0; j < num_cols; j++) {
-            fscanf(fp, "%f", *(vals + i) + j);
+            fscanf(fp, "%f", &vals[i][j]);
 
         }
     }
