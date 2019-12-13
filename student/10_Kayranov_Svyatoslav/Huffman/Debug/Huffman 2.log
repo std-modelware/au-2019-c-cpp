@@ -1,0 +1,10 @@
+﻿  huffman.c
+C:\Users\svyat\source\repos\Huffman 2\Huffman\huffman.c(53,9): warning C4033:  "readSymbols" должен возвращать значение
+C:\Users\svyat\source\repos\Huffman 2\Huffman\huffman.c(75,21): warning C4047:  =: "int" отличается по уровням косвенного обращения от "void *"
+C:\Users\svyat\source\repos\Huffman 2\Huffman\huffman.c(158,9): warning C4033:  "readSymbols" должен возвращать значение
+C:\Users\svyat\source\repos\Huffman 2\Huffman\huffman.c(171,16): warning C4013:  strncmp: нет определения; предполагается "extern" с возвратом типа "int"
+  main.c
+  Создание кода...
+C:\Users\svyat\source\repos\Huffman 2\Huffman\huffman.c(171,47): warning C4013:  strlen: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\svyat\source\repos\Huffman 2\Huffman\huffman.c(179): warning C4716:  readSymbols: должна возвращать значение
+  Huffman 2.vcxproj -> C:\Users\svyat\source\repos\Huffman 2\Huffman\Debug\Huffman 2.exe
