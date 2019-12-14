@@ -1,22 +1,26 @@
-int exists(const char *fname) {
-    FILE *file;
-    if ((file = fopen(fname, "r"))) {
-        fclose(file);
-        return 1;
-    }
-    return 0;
+#pragma once
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+int exists(const char* fname) {
+	FILE* file;
+	if ((file = fopen(fname, "r"))) {
+		fclose(file);
+		return 1;
+	}
+	return 0;
 }
 
-int copy(char *__s1, char *__s2) {
-    for (int i = 0; i < 100; i++) {
-        __s1[i] = __s2[i];
-    }
+int copy(char* __s1, char* __s2) {
+	for (int i = 0; i < 100; i++) {
+		__s1[i] = __s2[i];
+	}
 }
-// Ñ€ÐµÐ°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ñ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸ Ð¸Ð· Ð±Ð¸Ð»Ð¸Ð¾Ñ‚ÐµÐºÐ¸ string.h Ñ‡Ð¸ÑÑ‚Ð¾ Ð´Ð»Ñ Ð¿Ñ€Ð¸ÐºÐ¾Ð»Ð°
-int strncmp(const char *__s1, const char *__s2, size_t __n) {
-    bool flag = 0;
-    for (int i = 0; i < __n; i++) {
-        if (__s1[i] != __s2[i]) flag = 1;
-    }
-    return(flag);
-}
+// ðåàëèçàöèÿ ôóíêöèè èç áèëèîòåêè string.h ÷èñòî äëÿ ïðèêîëà
+// int strncmp(const char *__s1, const char *__s2, size_t __n) {
+//    bool flag = 0;
+//    for (int i = 0; i < __n; i++) {
+//        if (__s1[i] != __s2[i]) flag = 1;
+//    }
+//    return(flag);
+//}
