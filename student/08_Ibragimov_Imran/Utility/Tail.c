@@ -2,86 +2,82 @@
 #include <stdio.h>
 #include <stdlib.h> 
 #include <assert.h>
-#define ARGS 10
-#define ARGSLEN 50
+#include <ctype.h>
 #pragma warning(disable : 4996)
 
-char str[100];
-char args[ARGS][ARGSLEN];
-
-void main() {
-	char *fileName = calloc(sizeof(fileName), 100);
+void main(int argc, char* argv[]) {
 	int lenght = 20;
 	char mode = 'n';
-	int numberOfArgs = 0;
 
-	if (fgets(str, sizeof(str), stdin) == NULL) exit(2);
-	//printf("String is: %s\n", str);
-
-	char *p = str;
-	for (int i = 0; i < ARGS; i++) {
-		char *nextSpace = strchr(p, ' ');
-		if (nextSpace == NULL ) nextSpace = strchr(p, '\0');
-		memcpy(&args[i][0], p, nextSpace - p);
-		numberOfArgs++;
-		if (*nextSpace == '\0') break;
-		p = nextSpace + 1;
+	for (int i = 1; i < argc; i++) {
+		if (!strcmp(argv[i], "-c")) { mode = 'c'; continue; }
+		if (atoi(argv[i])) {
+			lenght = atoi(argv[i]);
+		}
 	}
 
-	if (!strcmp(&args[0][0], "tail")) {
-		for (int i = 1; i < numberOfArgs; i++) {
-			if (!strcmp(&args[i][0], "-c")) { mode = 'c'; continue; }
-			if (atoi(&args[i][0])) {
-				lenght = atoi(&args[i][0]);
-			}
-		}
-		fileName = &args[numberOfArgs - 1][0];
-		fileName[strlen(fileName) - 1] = '\0';
+	assert(argv[argc - 1] != NULL);
+	FILE *curFile = fopen(argv[argc - 1], "rb");
 
+	if (mode == 'n') {
+		int count = 1;
+		int stringCount = 0;
+		long startPos = ftell(curFile);
+		assert(curFile != NULL);
+		fseek(curFile, -1, SEEK_END);  
+		char ch = 'a';
 
-		printf("readMode is: %c \n", mode);
-		printf("number of strings is: %d\n", lenght);
+		for (int i = 0; (i < lenght) && (ftell(curFile) != 0); i++) {
+			ch = fgetc(curFile);
+			fseek(curFile, -2, SEEK_CUR);
 
-		printf("Filename: \"%s\"\n", fileName);
-		assert(fileName != NULL);
-
-		FILE *curFile = fopen(fileName, "rb");
-		if (mode == 'n') {
-			assert(curFile != NULL);
-			fseek(curFile, -1, SEEK_END);  
-			char ch = 'a';
-			for (int i = 0; i < lenght; i++) {
+			while (ch != '\n') {  
 				ch = fgetc(curFile);
-				fseek(curFile, -2, SEEK_CUR);
-				while (ch != '\n') {     //start of file too
-					ch = fgetc(curFile);
-					//printf("%c",ch);
-					fseek(curFile, -2, SEEK_CUR);
+				fseek(curFile, -1, SEEK_CUR);
+				if (ftell(curFile) == 0) break;
+				fseek(curFile, -1, SEEK_CUR);
+
+			}
+			stringCount++;
+		}
+
+		char curStr[128];
+
+		for (int i = 0; i < stringCount; i++) {
+			fgets(curStr, 128*sizeof(char), curFile);
+			printf("%d. %s", count, curStr);
+			count++;
+		}
+	}
+	else if (mode == 'c') {
+		fseek(curFile, -lenght, SEEK_END);
+		char buffer[18] = "error";
+		printf("          00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F\n");
+		int n = 16;
+		int offset = 0;
+		while (n == 16) {
+			n = fread(buffer, 1, 16, curFile);
+			printf("%08X  ", offset);
+			offset = offset + 16;
+
+			for (int i = 0; i < n; i++) {;
+				printf("%02X ", buffer[i]);
+			}
+
+			if (n < 16) {
+				for (int i = 0; i < 16-n; i++) {
+					printf("   ");
 				}
 			}
-			fseek(curFile, 2, SEEK_CUR);
-			char curStr[128];
-			for (int i = 0; i < lenght; i++) {
-				fgets(curStr, 128*sizeof(char), curFile);
-				printf(curStr);
-			}
-		}
-		else if (mode == 'c') {
-			fseek(curFile, -lenght, SEEK_END);
-			char buffer[10] = "error";
-			int n = 9;
-			while (n == 9) {
-				n = fread(buffer, 1, 9, curFile);
-				buffer[9] = '\0';
-				if (n==9)
-				printf(buffer);
-			}
-			if (n != 0) {
-				buffer[n] = '\0';
-				printf(buffer); 
-			}
-		}
-		fclose(curFile);
-	}
 
+			printf("             ");
+			for (int j = 0; j < n; j++) {
+				if (isprint(buffer[j]) != 0 && isspace(buffer[j]) == 0)
+					printf("%c", buffer[j]);
+				else printf(".");
+			}
+			printf("\n");
+		}
+	}
+	fclose(curFile);
 }
