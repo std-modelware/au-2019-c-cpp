@@ -160,20 +160,31 @@ void Option() {
 			dig = dig - 16;
 		} while (dig > 0);
 		
+		printf("      00 01 02 03  04 05 06 07  08 09 0A 0B  0C 0D 0E 0F\n");
+
 		for (int i = 0; i < strings; i++) {
 			printf("%4d ", i);
 			for (count = 0; count < 16; count++) {
 				if (count % 4 == 0) printf(" ");
 				c = getc(file);
-				str1[count] = c;
 
-				if ((count == digits) || (c == EOF))  break;
 				strcpy(str, binToHex((int)c));
-				printf("%c%c ", str[0], str[1]);
+				if ((count >= digits ) || (c == EOF)) {
+					str1[count] = ' ';
+					printf(".. ");
+				}
+				else {
+					str1[count] = c;
+					printf("%c%c ", str[0], str[1]);
+				}
 			}
 			printf(" | ");
 			for (int l = 0; l < 16; l++) {
-				if (str1[l] != "\n") printf("%c", str1[l]);
+				if ((str1[l] == '\n') || str1[l] == '\r') printf(" ");
+				else {
+					if ((str1[l] == NULL) || (str1[l] == 'М')) printf(" ");
+					else printf("%c", str1[l]);
+				}
 			}
 			printf("\n");
 		}
