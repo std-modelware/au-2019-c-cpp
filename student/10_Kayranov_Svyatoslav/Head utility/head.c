@@ -85,27 +85,6 @@ char digit(int num)
 	}
 }
 
-/*
-int binToHex(b) {
-	int h1;
-	int h0;
-	if (b > 0) {
-		h1 = b % 16;
-		if (b > 15) {
-			h0 = b / 16 % 16;
-		}
-		else {
-			h0 = 0;
-		}
-	}
-	else {
-		h0 = 0;
-		h1 = 0;
-	}
-	char str[2] = { digit(h0), digit(h1) };
-	return(str);
-} */
-
 int binToHex(b) {
 	int h1;
 	int h0;
@@ -144,6 +123,7 @@ void Option() {
 		}
 		fclose(file);
 	}
+
 	// проверка если выбрана опция -с
 	else {
 		char c;
@@ -190,8 +170,6 @@ void Option() {
 		}
 		fclose(file);
 	}
-	// доказательство правильной работы программы 
-	// https://i.imgur.com/YKYSLca.png
 }
 
 int main(void) {
