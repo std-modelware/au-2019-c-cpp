@@ -11,7 +11,7 @@ int exists(const char* fname) {
 	return 0;
 }
 
-int copy(char* __s1, char* __s2) {
+void copy(char* __s1, char* __s2) {
 	for (int i = 0; i < 100; i++) {
 		__s1[i] = __s2[i];
 	}
