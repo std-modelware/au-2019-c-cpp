@@ -23,9 +23,7 @@ bool flag = 0;
 void readString() {
 	scanf("%s%s", utilityName, option);
 
-	//сравнение на наличие опции (-n или -c) в аргументах
 	if (strncmp(option, "-", 1)) {
-		//опции нету
 		copy(fileName, option);
 		copy(option, "-n");
 		digits = 10;
@@ -43,8 +41,7 @@ void readString() {
 	printf("Read: (%s) (%s) (%d) (%s)\n", utilityName, option, digits, fileName);
 }
 
-//проверка введенных аргументов на корректность
-void checkArgs() {
+void check() {
 	if (strncmp(utilityName, "head", 4)) {
 		printf("%s%s%s\n", "No command ", utilityName, " found");
 		exit(EXIT_FAILURE);
@@ -86,21 +83,13 @@ char digit(int num)
 }
 
 int binToHex(b) {
-	int h1;
-	int h0;
+	int h0, h1;
 	if (b > 0) {
 		h1 = b % 16;
-		if (b > 15) {
-			h0 = b / 16 % 16;
-		}
-		else {
-			h0 = 0;
-		}
+		if (b > 15) h0 = b / 16 % 16;
+		else h0 = 0;
 	}
-	else {
-		h0 = 0;
-		h1 = 0;
-	}
+	else h0, h1 = 0;
 	char str[2] = { digit(h0), digit(h1) };
 	return str;
 }
@@ -126,10 +115,8 @@ void Option() {
 
 	// проверка если выбрана опция -с
 	else {
-		char c;
-		char str1[16];
-		int count = 0;
-		int strings = 0;
+		char c, str1[16];
+		int count, strings = 0;
 		FILE* file;
 		file = fopen(fileName, "rb");
 
@@ -174,6 +161,6 @@ void Option() {
 
 int main(void) {
 	readString();
-	checkArgs();
+	check();
 	Option();
 }
