@@ -37,9 +37,4 @@
       <Filter>Файлы ресурсов</Filter>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="functions.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-  </ItemGroup>
 </Project>

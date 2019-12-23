@@ -1,5 +1,9 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
-#include "functions.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
+
 #define LEN 100
 
 int digits;
@@ -20,6 +24,22 @@ bool flag = 0;
 	head -с 20 filename.txt - изменение количества считываемых Байтов
 */
 
+int exists(const char* fname) {
+	FILE* file;
+	if ((file = fopen(fname, "r"))) {
+		fclose(file);
+		return 1;
+	}
+	return 0;
+}
+
+void copy(char* __s1, char* __s2) {
+	for (int i = 0; i < 100; i++) {
+		__s1[i] = __s2[i];
+	}
+}
+
+/*
 void readString() {
 	scanf("%s%s", utilityName, option);
 
@@ -41,7 +61,7 @@ void readString() {
 	printf("Read: (%s) (%s) (%d) (%s)\n", utilityName, option, digits, fileName);
 }
 
-void check() {
+void check(int argc, char* argv[]) {
 	if (strncmp(utilityName, "head", 4)) {
 		printf("%s%s%s\n", "No command ", utilityName, " found");
 		exit(EXIT_FAILURE);
@@ -56,6 +76,30 @@ void check() {
 				printf("%s'%s'%s\n", "head: cannot open ", fileName, " for reading: No such file or directory");
 				exit(EXIT_FAILURE);
 			}
+		}
+	}
+} */
+
+void check(int argc, char* argv[]) {
+	char digitss[LEN];
+	copy(option, argv[1]);
+	copy(digitss, argv[2]);
+	copy(fileName, argv[3]);
+	if (strncmp(option, "-n", 2) && strncmp(option, "-c", 2)) {
+		printf("%s'%s'\n", "head: invalid operation ", option);
+		exit(EXIT_FAILURE);
+	}
+	else {
+		if (fileName == NULL) {
+			copy(fileName, argv[2]);
+			digits = 10;
+		}
+		else {
+			digits = atoi(digitss);
+		}
+		if (!exists(fileName)) {
+			printf("%s'%s'%s\n", "head: cannot open ", fileName, " for reading: No such file or directory");
+			exit(EXIT_FAILURE);
 		}
 	}
 }
@@ -80,6 +124,7 @@ char digit(int num)
 	case 14: return 'E';
 	case 15: return 'F';
 	}
+	return(EXIT_FAILURE);
 }
 
 int binToHex(b) {
@@ -96,19 +141,23 @@ int binToHex(b) {
 
 void Option() {
 	if (!(strncmp(option, "-n", 2))) {
-		char c;
+		char c = 0;
 		int count = 0;
 		FILE* file;
 		file = fopen(fileName, "rb");
 
 		for (count = 0; count < digits; count++) {
-			printf("(%d) ", count + 1);
+			if (c != EOF) {
+				printf("(%d) ", count + 1);
+			}
 			while (1) {
 				c = getc(file);
 				if ((c == '\n') || (c == EOF))  break;
 				printf("%c", c);
 			}
-			printf("\n");
+			if (c != EOF) {
+				printf("\n");
+			}
 		}
 		fclose(file);
 	}
@@ -117,6 +166,8 @@ void Option() {
 	else {
 		char c, str1[16];
 		int count, strings = 0;
+		int offset = 0;
+		int counter = 0;
 		FILE* file;
 		file = fopen(fileName, "rb");
 
@@ -127,16 +178,17 @@ void Option() {
 			dig = dig - 16;
 		} while (dig > 0);
 		
-		printf("      00 01 02 03  04 05 06 07  08 09 0A 0B  0C 0D 0E 0F\n");
-
+		printf("           00 01 02 03  04 05 06 07  08 09 0A 0B  0C 0D 0E 0F\n");
 		for (int i = 0; i < strings; i++) {
-			printf("%4d ", i);
+			printf("%08X  ", offset);
+			offset = offset + 16;
 			for (count = 0; count < 16; count++) {
+				counter++;
 				if (count % 4 == 0) printf(" ");
 				c = getc(file);
 
-				strcpy(str, binToHex((int)c));
-				if ((count >= digits ) || (c == EOF)) {
+				strcpy(str, binToHex(c));
+				if ((count >= digits) || (c == EOF) || (counter > digits)) {
 					str1[count] = ' ';
 					printf(".. ");
 				}
@@ -159,8 +211,9 @@ void Option() {
 	}
 }
 
-int main(void) {
-	readString();
-	check();
+int main(int argc, char *argv[]) {
+//	readString();
+	check(argc, argv);
 	Option();
+	return 0;
 }
