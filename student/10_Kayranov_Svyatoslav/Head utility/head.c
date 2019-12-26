@@ -12,16 +12,14 @@ char utilityName[LEN];
 char fileName[LEN];
 char option[LEN];
 char str[LEN];
+char syntax[] = { "	Avaliable syntax: \nhead -n 20 filename.txt - line-by-line reading \nhead -c 20 filename.txt - byte-by-byte reading" };
 bool flag = 0;
 
 /*
 ♔ Модуль считывания команд ♔
 Доступный синтаксис:
-	head filename.txt
-	head -n filename.txt - построчное считывание (по умолчанию)
-	head -с filename.txt - поБайтовое считывание
-	head -n 20 filename.txt - изменение количества считываемых строк
-	head -с 20 filename.txt - изменение количества считываемых Байтов
+	head -n 20 filename.txt - построчное считывание
+	head -с 20 filename.txt - побайтовое считывание
 */
 
 int exists(const char* fname) {
@@ -39,54 +37,22 @@ void copy(char* __s1, char* __s2) {
 	}
 }
 
-/*
-void readString() {
-	scanf("%s%s", utilityName, option);
-
-	if (strncmp(option, "-", 1)) {
-		copy(fileName, option);
-		copy(option, "-n");
-		digits = 10;
-	}
-	else {
-		scanf("%d", &digits);
-		if (digits == 0) {
-			digits = 10;
-			scanf("%s", fileName);
-		}
-		else {
-			scanf("%s", fileName);
-		}
-	}
-	printf("Read: (%s) (%s) (%d) (%s)\n", utilityName, option, digits, fileName);
-}
-
-void check(int argc, char* argv[]) {
-	if (strncmp(utilityName, "head", 4)) {
-		printf("%s%s%s\n", "No command ", utilityName, " found");
-		exit(EXIT_FAILURE);
-	}
-	else {
-		if (strncmp(option, "-n", 2) && strncmp(option, "-c", 2)) {
-			printf("%s'%s'\n", "head: invalid operation ", option);
-			exit(EXIT_FAILURE);
-		}
-		else {
-			if (!exists(fileName)) {
-				printf("%s'%s'%s\n", "head: cannot open ", fileName, " for reading: No such file or directory");
-				exit(EXIT_FAILURE);
-			}
-		}
-	}
-} */
-
 void check(int argc, char* argv[]) {
 	char digitss[LEN];
+
+	if (argc != 4) {
+		printf("Invalid amount of arguments.\n");
+		printf(syntax);
+		exit(EXIT_FAILURE);
+	}
+
 	copy(option, argv[1]);
 	copy(digitss, argv[2]);
 	copy(fileName, argv[3]);
+
 	if (strncmp(option, "-n", 2) && strncmp(option, "-c", 2)) {
 		printf("%s'%s'\n", "head: invalid operation ", option);
+		printf(syntax);
 		exit(EXIT_FAILURE);
 	}
 	else {
@@ -99,6 +65,7 @@ void check(int argc, char* argv[]) {
 		}
 		if (!exists(fileName)) {
 			printf("%s'%s'%s\n", "head: cannot open ", fileName, " for reading: No such file or directory");
+			printf(syntax);
 			exit(EXIT_FAILURE);
 		}
 	}
@@ -164,10 +131,11 @@ void Option() {
 
 	// проверка если выбрана опция -с
 	else {
-		char c, str1[16];
+		int c, str1[16];
 		int count, strings = 0;
 		int offset = 0;
 		int counter = 0;
+		int endOfFile = 0;
 		FILE* file;
 		file = fopen(fileName, "rb");
 
@@ -188,9 +156,12 @@ void Option() {
 				c = getc(file);
 
 				strcpy(str, binToHex(c));
-				if ((count >= digits) || (c == EOF) || (counter > digits)) {
+				if (((count >= digits) || (c == EOF) || (counter > digits)) && (c != 255)) {
 					str1[count] = ' ';
 					printf(".. ");
+					if ((counter % 16) == 0) {
+						endOfFile = 1;
+					}
 				}
 				else {
 					str1[count] = c;
@@ -206,6 +177,7 @@ void Option() {
 				}
 			}
 			printf("\n");
+			if (endOfFile == 1) return 0;
 		}
 		fclose(file);
 	}
@@ -217,3 +189,45 @@ int main(int argc, char *argv[]) {
 	Option();
 	return 0;
 }
+
+
+/*
+void readString() {
+	scanf("%s%s", utilityName, option);
+
+	if (strncmp(option, "-", 1)) {
+		copy(fileName, option);
+		copy(option, "-n");
+		digits = 10;
+	}
+	else {
+		scanf("%d", &digits);
+		if (digits == 0) {
+			digits = 10;
+			scanf("%s", fileName);
+		}
+		else {
+			scanf("%s", fileName);
+		}
+	}
+	printf("Read: (%s) (%s) (%d) (%s)\n", utilityName, option, digits, fileName);
+}
+
+void check(int argc, char* argv[]) {
+	if (strncmp(utilityName, "head", 4)) {
+		printf("%s%s%s\n", "No command ", utilityName, " found");
+		exit(EXIT_FAILURE);
+	}
+	else {
+		if (strncmp(option, "-n", 2) && strncmp(option, "-c", 2)) {
+			printf("%s'%s'\n", "head: invalid operation ", option);
+			exit(EXIT_FAILURE);
+		}
+		else {
+			if (!exists(fileName)) {
+				printf("%s'%s'%s\n", "head: cannot open ", fileName, " for reading: No such file or directory");
+				exit(EXIT_FAILURE);
+			}
+		}
+	}
+} */
