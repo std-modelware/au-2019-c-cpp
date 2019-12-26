@@ -1,0 +1,8 @@
+﻿  head.c
+C:\Users\svyat\Desktop\au-2019-c-cpp_v2\student\10_Kayranov_Svyatoslav\Head utility\head.c(106,12): warning C4047:  return: "int" отличается по уровням косвенного обращения от "char [2]"
+C:\Users\svyat\Desktop\au-2019-c-cpp_v2\student\10_Kayranov_Svyatoslav\Head utility\head.c(158,28): warning C4047:  функция: "const char *" отличается по уровням косвенного обращения от "int"
+C:\Users\svyat\Desktop\au-2019-c-cpp_v2\student\10_Kayranov_Svyatoslav\Head utility\head.c(158,28): warning C4024:  strcpy: различные типы для формального и фактического параметров 2
+C:\Users\svyat\Desktop\au-2019-c-cpp_v2\student\10_Kayranov_Svyatoslav\Head utility\head.c(175,26): warning C4047:  ==: "int" отличается по уровням косвенного обращения от "void *"
+C:\Users\svyat\Desktop\au-2019-c-cpp_v2\student\10_Kayranov_Svyatoslav\Head utility\head.c(180,32): warning C4098:  Option: функция типа "void", возвращающая значение
+C:\Users\svyat\Desktop\au-2019-c-cpp_v2\student\10_Kayranov_Svyatoslav\Head utility\head.c(106): warning C4172:  возвращение адреса локальной или временной переменной : str
+  Head.vcxproj -> C:\Users\svyat\Desktop\au-2019-c-cpp_v2\student\10_Kayranov_Svyatoslav\Head utility\Debug\Head.exe
