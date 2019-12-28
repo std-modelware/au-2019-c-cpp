@@ -1,0 +1,28 @@
+﻿  main.c
+C:\Users\User\source\repos\wc\wc\main.c(42,28): warning C4047: 'function': 'char **' differs in levels of indirection from 'char *'
+C:\Users\User\source\repos\wc\wc\main.c(42,28): warning C4024: 'Get_TextCode': different types for formal and actual parameter 1
+C:\Users\User\source\repos\wc\wc\main.c(57,26): warning C4047: 'function': 'char **' differs in levels of indirection from 'char *'
+C:\Users\User\source\repos\wc\wc\main.c(57,26): warning C4024: 'Count_String': different types for formal and actual parameter 1
+C:\Users\User\source\repos\wc\wc\main.c(62,26): warning C4047: 'function': 'char **' differs in levels of indirection from 'char *'
+C:\Users\User\source\repos\wc\wc\main.c(62,26): warning C4024: 'Count_Symbol': different types for formal and actual parameter 1
+C:\Users\User\source\repos\wc\wc\main.c(63,24): warning C4047: 'function': 'char **' differs in levels of indirection from 'char *'
+C:\Users\User\source\repos\wc\wc\main.c(63,24): warning C4024: 'Count_Byte': different types for formal and actual parameter 1
+C:\Users\User\source\repos\wc\wc\main.c(68,26): warning C4047: 'function': 'char **' differs in levels of indirection from 'char *'
+C:\Users\User\source\repos\wc\wc\main.c(68,26): warning C4024: 'Count_Symbol': different types for formal and actual parameter 1
+C:\Users\User\source\repos\wc\wc\main.c(73,28): warning C4047: 'function': 'char **' differs in levels of indirection from 'char *'
+C:\Users\User\source\repos\wc\wc\main.c(73,28): warning C4024: 'MaxSize_String': different types for formal and actual parameter 1
+C:\Users\User\source\repos\wc\wc\main.c(78,25): warning C4047: 'function': 'char **' differs in levels of indirection from 'char *'
+C:\Users\User\source\repos\wc\wc\main.c(78,25): warning C4024: 'Count_Words': different types for formal and actual parameter 1
+C:\Users\User\source\repos\wc\wc\main.c(90,24): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char **'
+C:\Users\User\source\repos\wc\wc\main.c(90,24): warning C4024: 'fopen': different types for formal and actual parameter 1
+C:\Users\User\source\repos\wc\wc\main.c(106,24): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char **'
+C:\Users\User\source\repos\wc\wc\main.c(106,24): warning C4024: 'fopen': different types for formal and actual parameter 1
+C:\Users\User\source\repos\wc\wc\main.c(122,24): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char **'
+C:\Users\User\source\repos\wc\wc\main.c(122,24): warning C4024: 'fopen': different types for formal and actual parameter 1
+C:\Users\User\source\repos\wc\wc\main.c(164,24): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char **'
+C:\Users\User\source\repos\wc\wc\main.c(164,24): warning C4024: 'fopen': different types for formal and actual parameter 1
+C:\Users\User\source\repos\wc\wc\main.c(200,24): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char **'
+C:\Users\User\source\repos\wc\wc\main.c(200,24): warning C4024: 'fopen': different types for formal and actual parameter 1
+C:\Users\User\source\repos\wc\wc\main.c(229,24): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char **'
+C:\Users\User\source\repos\wc\wc\main.c(229,24): warning C4024: 'fopen': different types for formal and actual parameter 1
+  wc.vcxproj -> C:\Users\User\source\repos\wc\Debug\wc.exe
